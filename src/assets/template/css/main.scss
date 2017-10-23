@@ -1,0 +1,27 @@
+@import 'modules/variables';
+/*@import 'sprites/sprite';*/
+@import 'modules/common';
+@import 'modules/page';
+
+.sdv:before{
+    display: inline-block;
+    content: "";
+    /*@include sprite($social_vk);*/
+}
+.menu{
+    margin: 10px;
+    &__list{
+        background-color: red;
+        font-size: 20px;
+    }
+    &:hover{
+        border: 1px red solid;
+    }
+}
+.zk{
+    color: green;
+    &:hover{
+    color: blue;
+    cursor: pointer;
+    }
+}
