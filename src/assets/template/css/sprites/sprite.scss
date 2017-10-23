@@ -86,6 +86,17 @@ $leaf-total-width: 137px;
 $leaf-total-height: 102px;
 $leaf-image: '/assets/template/css/sprites/sprite.png';
 $leaf: (112px, 40px, -112px, -40px, 16px, 19px, 137px, 102px, '/assets/template/css/sprites/sprite.png', 'leaf', );
+$lock-name: 'lock';
+$lock-x: 124px;
+$lock-y: 59px;
+$lock-offset-x: -124px;
+$lock-offset-y: -59px;
+$lock-width: 10px;
+$lock-height: 13px;
+$lock-total-width: 137px;
+$lock-total-height: 102px;
+$lock-image: '/assets/template/css/sprites/sprite.png';
+$lock: (124px, 59px, -124px, -59px, 10px, 13px, 137px, 102px, '/assets/template/css/sprites/sprite.png', 'lock', );
 $next-name: 'next';
 $next-x: 88px;
 $next-y: 0px;
@@ -144,7 +155,7 @@ $social-vk: (112px, 0px, -112px, 0px, 25px, 20px, 137px, 102px, '/assets/templat
 $spritesheet-width: 137px;
 $spritesheet-height: 102px;
 $spritesheet-image: '/assets/template/css/sprites/sprite.png';
-$spritesheet-sprites: ($adv-1, $adv-2, $adv-3, $arrow-down-red, $arrow-up-red, $check, $leaf, $next, $print-white, $social-instagram, $social-ok, $social-vk, );
+$spritesheet-sprites: ($adv-1, $adv-2, $adv-3, $arrow-down-red, $arrow-up-red, $check, $leaf, $lock, $next, $print-white, $social-instagram, $social-ok, $social-vk, );
 $spritesheet: (137px, 102px, '/assets/template/css/sprites/sprite.png', $spritesheet-sprites, );
 
 // The provided mixins are intended to be used with the array-like variables

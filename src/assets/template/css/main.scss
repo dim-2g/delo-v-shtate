@@ -4,6 +4,9 @@
 @import 'modules/common';
 @import 'modules/page';
 
+.uk-container{
+    max-width: 1170px;
+}
 .sdv:before{
     display: inline-block;
     content: "";
@@ -54,7 +57,145 @@
     }
 }
 .header{
+    box-shadow: 0 1px 2px 1px #e3e3e3;
+    position: relative;
+    z-index: 10;
     &__body{
-        padding: 20px 0;
+        padding: 25px 0 20px;
+    }
+    &__phone{
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 12px;
+    }
+    &__top-menu{
+        margin-bottom: 6px;
+        ul{
+            list-style-type: none;
+        }
+        li{
+            a{
+                font-size: 16px;
+                transition: $anim;
+                &:hover{
+                    transition: $anim;
+                }
+            }
+            &.active a{
+                color: $green;
+            }
+        }
+    }
+    
+    &__section-menu li + li{
+        border-left: 1px solid $gray-light;
+    }
+    &__section-menu a{
+        font-size: 18px;
+        padding: 0 10px;
+        display: inline-block;
+        transition: $anim;
+        &:hover{
+            transition: $anim;
+        }
+    }
+}
+.button{
+    background-color: $green;
+    display: inline-block;
+    color: #fff;
+    width: 100%;
+    border-radius: 5px;
+    padding: 11px 10px;
+    line-height: 100%;
+    box-sizing: border-box;
+    font-size: 18px;
+    max-width: 260px;
+    transition: $anim;
+    &:hover{
+        text-decoration: none;
+        color: #fff;
+        opacity: 0.9;
+        transition: $anim;
+    }
+}
+.footer{
+    background-color: #555;
+    color: #fff;
+    padding: 50px 0;
+    a{
+        color: #fff;
+    }
+    .button{
+        min-width: 262px;
+        text-align: center;
+    }
+    &__logo{
+        margin-top: 7px;
+    }
+    &__maim-menu{
+        text-align: left;
+        list-style-type: none;
+        margin-left: 40px;
+        li{
+            margin-bottom: 14px;
+        }
+        a{
+            font-size: 16px;
+        }
+    }
+    &__section{
+        text-align: left;
+        &-name{
+            font-weight: 500;
+            font-size: 16px;
+        }
+        &-list{
+            padding-left: 0;
+            margin-top: 15px;
+            li{
+                display: inline-block;
+                width: 49.5%;
+                margin-bottom: 14px;
+                &:before{
+                    content: "•";
+                    font-size: 12px;
+                    display: inline-block;
+                    margin-right: 2px;
+                }
+            }
+            a{
+                font-size: 16px;
+            }
+        }   
+    }
+    &__contacts{
+        text-align: left; 
+    }
+    &__contacts-group{
+        border-left: 1px $green solid;
+    }
+    &__phone{
+        font-size: 18px;
+        font-weight: 500;
+        &:before{
+            content: "";
+            display: inline-block;
+            @include sprite($lock);
+        }
+    }
+    &__address{
+        font-size: 16px;
+        &.uk-grid-margin{
+            margin-top: 16px;    
+        }
+    }
+    &__email{
+        a{
+            font-size: 18px;    
+        }
+        &.uk-grid-margin{
+            margin-top: 24px;    
+        }
     }
 }
