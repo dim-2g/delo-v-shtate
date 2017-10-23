@@ -1,5 +1,6 @@
+@import '../fonts/stylesheet.css';
 @import 'modules/variables';
-/*@import 'sprites/sprite';*/
+@import 'sprites/sprite';
 @import 'modules/common';
 @import 'modules/page';
 
@@ -23,5 +24,37 @@
     &:hover{
     color: blue;
     cursor: pointer;
+    }
+}
+
+.topline{
+    background-color: $fon-gray;
+    color: #fff;
+    &__address{
+        font-weight: 300;
+        line-height: 30px;
+        min-height: 30px;
+    }
+    &__anketa{
+        line-height: 30px;
+        min-height: 30px;  
+        position: relative;
+        padding-left: 50px;
+        &:before{
+            content: "";
+            /*position: absolute;*/
+            display: inline-block;
+            margin-right: 30px;
+            height: 30px;
+            width: 30px;
+            left: 0;
+            vertical-align: middle;
+            @include sprite($print-white);
+        }      
+    }
+}
+.header{
+    &__body{
+        padding: 20px 0;
     }
 }
