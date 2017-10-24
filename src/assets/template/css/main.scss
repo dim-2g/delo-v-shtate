@@ -1,4 +1,5 @@
 @import '../fonts/stylesheet.css';
+@import 'skeleton/skeleton';
 @import 'modules/variables';
 @import 'sprites/sprite';
 @import 'modules/common';
@@ -37,12 +38,14 @@
         font-weight: 300;
         line-height: 30px;
         min-height: 30px;
+        text-align: center;
     }
     &__anketa{
         line-height: 30px;
         min-height: 30px;  
         position: relative;
         padding-left: 50px;
+        text-align: center;
         &:before{
             content: "";
             /*position: absolute;*/
@@ -62,6 +65,9 @@
     z-index: 10;
     &__body{
         padding: 25px 0 20px;
+    }
+    &__contacts{
+        text-align: center;
     }
     &__phone{
         font-size: 16px;
@@ -100,6 +106,29 @@
         }
     }
 }
+.top-menu__list{
+    display: flex; align-items: flex-start; flex-wrap: nowrap;
+    width: 100%;
+    > li{
+        display: block;
+        width: 40%;
+        text-align: center;
+        @media ($bp-larger-than-phablet) {
+            display: table-cell;
+        }
+    }
+    @media ($bp-larger-than-phablet) {
+        display: table;
+        table-layout: fixed;
+    }
+}
+.section-menu__list{
+    width: 100%;
+    list-style-type: none;
+    li{
+        text-align: center;
+    }
+}
 .button{
     background-color: $green;
     display: inline-block;
@@ -132,11 +161,15 @@
     }
     &__logo{
         margin-top: 7px;
+        width: 23%;
+    }
+    &__contacts{
+        width: 19%;
     }
     &__maim-menu{
         text-align: left;
         list-style-type: none;
-        margin-left: 40px;
+        width: 15%;
         li{
             margin-bottom: 14px;
         }
