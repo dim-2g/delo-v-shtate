@@ -1,234 +1,250 @@
 @import '../fonts/stylesheet.css';
+@import '../fonts/font-awesome.css';
 @import 'skeleton/skeleton';
 @import 'modules/variables';
 @import 'sprites/sprite';
 @import 'modules/common';
 @import 'modules/page';
 
-.uk-container{
-    max-width: 1170px;
-}
-.sdv:before{
-    display: inline-block;
-    content: "";
-    /*@include sprite($social_vk);*/
-}
-.menu{
-    margin: 10px;
-    &__list{
-        background-color: red;
-        font-size: 20px;
-    }
-    &:hover{
-        border: 1px red solid;
-    }
-}
-.zk{
-    color: green;
-    &:hover{
-    color: blue;
-    cursor: pointer;
-    }
-}
 
-.topline{
-    background-color: $fon-gray;
-    color: #fff;
-    &__address{
-        font-weight: 300;
-        line-height: 30px;
-        min-height: 30px;
-        text-align: center;
+.bnr{
+    box-shadow: 0 1px 12px 1px #cccccc;
+    &__top{
+        height: 425px;
+        background: transparent url('/assets/template/img/bnr__bg.jpg') center -350px no-repeat;
+        background-attachment: fixed;
     }
-    &__anketa{
-        line-height: 30px;
-        min-height: 30px;  
-        position: relative;
-        padding-left: 50px;
-        text-align: center;
-        &:before{
-            content: "";
-            /*position: absolute;*/
-            display: inline-block;
-            margin-right: 30px;
-            height: 30px;
-            width: 30px;
-            left: 0;
-            vertical-align: middle;
-            @include sprite($print-white);
-        }      
+    &__people{
+        width: 100%;
+        min-height: 425px;
+        background: transparent url('/assets/template/img/bnr__people.png') right bottom no-repeat;
+        background-size: contain;
+    }
+    &__info{
+        padding-top: 110px;
+        padding-left: 34px;
+    }
+    &__header{
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 130%;
+    }
+    &__text{
+        font-size:24px;
+    }
+    &__request{
+        //min-height:300px;
+        background: transparent url('/assets/template/img/bnr__forma.jpg') 8% top no-repeat;
     }
 }
-.header{
-    box-shadow: 0 1px 2px 1px #e3e3e3;
-    position: relative;
-    z-index: 10;
-    &__body{
-        padding: 25px 0 20px;
+.request{
+    &__info{
+        padding-top: 55px;
+        padding-left: 32px;
     }
-    &__contacts{
-        text-align: center;
+    &__header{
+        font-size: 30px;
+        line-height: 120%;
+        font-weight:500;
+        margin-bottom: 20px;
     }
-    &__phone{
+    &__text{
         font-size: 16px;
-        font-weight: 500;
-        margin-bottom: 12px;
     }
-    &__top-menu{
-        margin-bottom: 6px;
-        ul{
-            list-style-type: none;
-        }
-        li{
-            a{
-                font-size: 16px;
-                transition: $anim;
-                &:hover{
-                    transition: $anim;
-                }
+    &__forma{
+        margin: 28px 0 26px;
+        input{
+            &[type="text"]{
+                float: left;
+                width: 263px;
+                height: 34px;
+                border: 1px solid $gray-light;
+                font-style: italic;
+                box-sizing: border-box;
+                margin-bottom: 21px;
             }
-            &.active a{
-                color: $green;
+            &[name="name"]{
+                margin-right: 31px;
+            }
+            &[name="email"]{
+                margin-right: 31px;
+            }
+            &[name="comment"]{
+                clear: both;
+                width: 557px;
+            }
+            &[name="vacancy"]{
+                font-size:16px;
+            }
+            &[type="file"]{
+                display: none;
+            }
+            button{
+                width: 263px;
             }
         }
     }
-    
-    &__section-menu li + li{
-        border-left: 1px solid $gray-light;
-    }
-    &__section-menu a{
-        font-size: 18px;
-        padding: 0 10px;
-        display: inline-block;
-        transition: $anim;
-        &:hover{
-            transition: $anim;
-        }
-    }
-}
-.top-menu__list{
-    display: flex; align-items: flex-start; flex-wrap: nowrap;
-    width: 100%;
-    > li{
-        display: block;
-        width: 40%;
-        text-align: center;
-        @media ($bp-larger-than-phablet) {
-            display: table-cell;
-        }
-    }
-    @media ($bp-larger-than-phablet) {
-        display: table;
-        table-layout: fixed;
-    }
-}
-.section-menu__list{
-    width: 100%;
-    list-style-type: none;
-    li{
-        text-align: center;
-    }
-}
-.button{
-    background-color: $green;
-    display: inline-block;
-    color: #fff;
-    width: 100%;
-    border-radius: 5px;
-    padding: 11px 10px;
-    line-height: 100%;
-    box-sizing: border-box;
-    font-size: 18px;
-    max-width: 260px;
-    transition: $anim;
-    &:hover{
-        text-decoration: none;
-        color: #fff;
-        opacity: 0.9;
-        transition: $anim;
-    }
-}
-.footer{
-    background-color: #555;
-    color: #fff;
-    padding: 50px 0;
-    a{
-        color: #fff;
-    }
-    .button{
-        min-width: 262px;
-        text-align: center;
-    }
-    &__logo{
-        margin-top: 7px;
-        width: 23%;
-    }
-    &__contacts{
-        width: 19%;
-    }
-    &__maim-menu{
-        text-align: left;
-        list-style-type: none;
-        width: 15%;
-        li{
-            margin-bottom: 14px;
-        }
-        a{
+    &__file{
+        width: 263px;
+        margin-right: 31px;
+        float: left;
+        label{
+            font-weight:normal;
             font-size: 16px;
-        }
-    }
-    &__section{
-        text-align: left;
-        &-name{
-            font-weight: 500;
-            font-size: 16px;
-        }
-        &-list{
-            padding-left: 0;
-            margin-top: 15px;
-            li{
+            padding-left: 48px;
+            padding-top: 3px;
+            position: relative;
+            &:before{
                 display: inline-block;
-                width: 49.5%;
-                margin-bottom: 14px;
-                &:before{
-                    content: "•";
-                    font-size: 12px;
-                    display: inline-block;
-                    margin-right: 2px;
-                }
+                width: 23px;
+                height: 26px;
+                content: "";
+                @include sprite($doc);
+                position: absolute;
+                left: 0;
             }
-            a{
-                font-size: 16px;
-            }
-        }   
+        }
     }
-    &__contacts{
-        text-align: left; 
+    &__agree {
+        margin-top: 8px;
     }
-    &__contacts-group{
-        border-left: 1px $green solid;
+
+}
+.block__header{
+    color: #293329;
+    font-size:24px;
+    text-align: center;
+    line-height: 100%;
+    margin-bottom: 88px;
+    position: relative;
+    &:after{
+        position: absolute;
+        width: 118px;
+        height: 3px;
+        background-color: $green;
+        left: 50%;
+        margin-left: -59px;
+        content: "";
+        bottom: -17px;
     }
-    &__phone{
+}
+.industry{
+    padding: 108px 0;
+    &__item{
+        border: 1px $gray-light solid;
+        width: 264px;
+        height: 264px;
+        margin: 0 auto 45px;
+        position: relative;
+        box-sizing: border-box;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:hover .industry__info{
+            transform: translateY(0px);
+        }
+    }
+    &__info{
+        background-color: $overlay;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 16px;
+        transform: translateY(200px);
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1) 0.075s;
+        transition-delay: 0.035s, 0.035s;
+    }
+    &__caption{
+        text-align: center;
         font-size: 18px;
         font-weight: 500;
-        &:before{
-            content: "";
+        height: 45px;
+        overflow: hidden;
+        line-height: 33px;
+        span{
             display: inline-block;
-            @include sprite($lock);
+            line-height: 100%;
+            vertical-align: middle;
         }
     }
-    &__address{
-        font-size: 16px;
-        &.uk-grid-margin{
-            margin-top: 16px;    
+    &__text{
+        line-height: 120%;
+        height: 95px;
+        overflow: hidden;
+    }
+    &__sum {
+        padding-left: 28px;
+        white-space: nowrap;
+        position: relative;
+        &:before{
+            position: absolute;
+            left: 3px;
+            top: 0;
+            width: 16px;
+            height: 21px;
+            content: "";
+            @include sprite($rub);
         }
     }
-    &__email{
-        a{
-            font-size: 18px;    
+    &__time{
+        padding-left: 40px;
+        white-space: nowrap;
+        position: relative;
+        &:before{
+            position: absolute;
+            left: 14px;
+            top: 0;
+            width: 21px;
+            height: 21px;
+            content: "";
+            @include sprite($clock);
         }
-        &.uk-grid-margin{
-            margin-top: 24px;    
+    }
+    &__btn{
+        width: 155px;
+        height: 36px;
+        line-height:32px;
+        text-align: center;
+        border-radius: 5px;
+        border: 1px #fff solid;
+        display: block;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        margin:27px auto 0;
+        box-sizing: border-box;
+        position: relative;
+        text-decoration: none;
+        span{
+            z-index: 2;
+            position: relative;
+        }
+        &:hover{
+            text-decoration: none;
+            span{
+                color: $fon-gray;
+            }
+            &:after {
+                transform: scaleX(1);
+                transition-delay: 0s;
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: #fff;
+            transform: scaleX(0);
+            transform-origin: center left;
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1) 0.075s;
+            transition-delay: 0.035s, 0.035s;
+            border-radius: 3px;
         }
     }
 }

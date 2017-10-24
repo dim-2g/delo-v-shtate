@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Главная страница</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.31/css/uikit.min.css" />
     <link rel="stylesheet" href="/assets/template/css/main.css">
 
 </head>
@@ -42,61 +41,180 @@
             <div class="header__contacts columns three">
                 <div class="header__phone">(499) 110-54-55</div>
                 <div class="header__call">
-                    <a href="#" class="button">Заказать звонок</a>
+                    <a href="#" class="btn">Заказать звонок</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="uk-container">
-
-<div class="uk-grid-match uk-grid-small uk-text-center uk-grid" uk-grid>
-    <div class="uk-width-1-2@m" style="background-color: red">
-        <div class="">1-2@m</div>
+<div class="bnr">
+    <div class="bnr__top">
+        <div class="container">
+            <div class="bnr__people">
+                <div class="bnr__info">
+                    <div class="bnr__header">Грамотный подбор персонала<br />для всех отраслей</div>
+                    <div class="bnr__text">от 3 дней и от 20 000 руб</div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="uk-width-1-4@m"  style="background-color: green">
-        <div class="">1-4@m</div>
-    </div>
-    <div class="uk-width-1-4@m"  style="background-color: blue">
-        <div class="">1-4@m</div>
-    </div>
-    <div class="uk-width-1-5@m uk-hidden@l">
-        <div class="uk-card uk-card-secondary uk-card-body">1-5@m<br>hidden@l</div>
-    </div>
-    <div class="uk-width-1-5@m uk-width-1-3@l">
-        <div class="uk-card uk-card-default uk-card-body">1-5@m<br>1-3@l</div>
-    </div>
-    <div class="uk-width-3-5@m uk-width-2-3@l">
-        <div class="uk-card uk-card-default uk-card-body">3-5@m<br>2-3@l</div>
+    <div class="bnr__request">
+        <div class="container">
+            <div class="row">
+                <div class="columns five request__info">
+                    <div class="request__header">Оставьте заявку<br />на подбор специалиста</div>
+                    <div class="request__text">мы пришлем вам нескольких кандидатов на выбор</div>
+                </div>
+                <div class="columns six">
+                    <div class="request__forma">
+                        <form action="" method="post">
+                            <input type="text" name="name" placeholder="Контактное лицо*">
+                            <input type="text" name="phone" placeholder="+7 (___) __-__-__">
+                            <input type="text" name="email" placeholder="E-mail*">
+                            <input type="text" name="vacancy" placeholder="Название вакаснии">
+                            <input type="text" name="comment" placeholder="Оставьте ваш комментарий">
+                            <div class="request__file">
+                                <input type="file" id="request-file">
+                                <label for="request-file">
+                                    <span class="anketa">Анкета на подбор</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn">Найти специалиста</button>
+                            <div class="request__agree">
+                                <label>
+                                    <input class="checkbox" type="checkbox" name="checkbox-test">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="label">выражаю согласие на обработку персональных данных (политика конфиденциальности)</span>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="uk-grid-match uk-grid-small uk-text-center" uk-grid>
-    <div class="uk-width-auto@m uk-visible@l">
-        <div class="uk-card uk-card-primary uk-card-body">auto@m<br>visible@l</div>
-    </div>
-    <div class="uk-width-1-3@m">
-        <div class="uk-card uk-card-default uk-card-body">1-3@m</div>
-    </div>
-    <div class="uk-width-expand@m">
-        <div class="uk-card uk-card-default uk-card-body">expand@m</div>
+<div class="industry">
+    <div class="container">
+        <div class="block__header">Подбор кадров по отраслям</div>
+        <div class="row">
+            <div class="columns three">
+                <div class="industry__item" style="background-image: url('/assets/template/img/industry/bank.jpg')">
+                    <div class="industry__info">
+                        <div class="industry__caption"><span>Банковский сектор</span></div>
+                        <div class="industry__text">Сюда можно написать несколько слов об особенностях подбора кадров в данной сфере. Показать, что компания имеет опыт в ней</div>
+                        <div class="row">
+                            <div class="industry__sum columns six">от 20 000</div>
+                            <div class="industry__time columns six">от 3 раб.дн.</div>
+                        </div>
+                        <a href="#" class="industry__btn"><span>Подробнее</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="columns three">
+                <div class="industry__item" style="background-image: url('/assets/template/img/industry/finance.jpg')">
+                    <div class="industry__info">
+                        <div class="industry__caption">Финансовый сектор</div>
+                        <div class="industry__text">Сюда можно написать несколько слов об особенностях подбора кадров в данной сфере. Показать, что компания имеет опыт в ней</div>
+                        <div class="row">
+                            <div class="industry__sum columns six">от 20 000</div>
+                            <div class="industry__time columns six">от 3 раб.дн.</div>
+                        </div>
+                        <a href="#" class="industry__btn"><span>Подробнее</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="columns three">
+                <div class="industry__item" style="background-image: url('/assets/template/img/industry/buhgalteria.jpg')">
+                    <div class="industry__info">
+                        <div class="industry__caption">Бухгалтерия</div>
+                        <div class="industry__text">Сюда можно написать несколько слов об особенностях подбора кадров в данной сфере. Показать, что компания имеет опыт в ней</div>
+                        <div class="row">
+                            <div class="industry__sum columns six">от 20 000</div>
+                            <div class="industry__time columns six">от 3 раб.дн.</div>
+                        </div>
+                        <a href="#" class="industry__btn"><span>Подробнее</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="columns three">
+                <div class="industry__item" style="background-image: url('/assets/template/img/industry/it.jpg')">
+                    <div class="industry__info">
+                        <div class="industry__caption">IT-отрасль</div>
+                        <div class="industry__text">Сюда можно написать несколько слов об особенностях подбора кадров в данной сфере. Показать, что компания имеет опыт в ней</div>
+                        <div class="row">
+                            <div class="industry__sum columns six">от 20 000</div>
+                            <div class="industry__time columns six">от 3 раб.дн.</div>
+                        </div>
+                        <a href="#" class="industry__btn"><span>Подробнее</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="columns three">
+                <div class="industry__item" style="background-image: url('/assets/template/img/industry/call-centr.jpg')">
+                    <div class="industry__info">
+                        <div class="industry__caption">Колл-центры</div>
+                        <div class="industry__text">Сюда можно написать несколько слов об особенностях подбора кадров в данной сфере. Показать, что компания имеет опыт в ней</div>
+                        <div class="row">
+                            <div class="industry__sum columns six">от 20 000</div>
+                            <div class="industry__time columns six">от 3 раб.дн.</div>
+                        </div>
+                        <a href="#" class="industry__btn"><span>Подробнее</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="columns three">
+                <div class="industry__item" style="background-image: url('/assets/template/img/industry/sales.jpg')">
+                    <div class="industry__info">
+                        <div class="industry__caption">Продажи</div>
+                        <div class="industry__text">Сюда можно написать несколько слов об особенностях подбора кадров в данной сфере. Показать, что компания имеет опыт в ней</div>
+                        <div class="row">
+                            <div class="industry__sum columns six">от 20 000</div>
+                            <div class="industry__time columns six">от 3 раб.дн.</div>
+                        </div>
+                        <a href="#" class="industry__btn"><span>Подробнее</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="columns three">
+                <div class="industry__item" style="background-image: url('/assets/template/img/industry/tele.jpg')">
+                    <div class="industry__info">
+                        <div class="industry__caption">Телекоммуникации</div>
+                        <div class="industry__text">Сюда можно написать несколько слов об особенностях подбора кадров в данной сфере. Показать, что компания имеет опыт в ней</div>
+                        <div class="row">
+                            <div class="industry__sum columns six">от 20 000</div>
+                            <div class="industry__time columns six">от 3 раб.дн.</div>
+                        </div>
+                        <a href="#" class="industry__btn"><span>Подробнее</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="columns three">
+                <div class="industry__item" style="background-image: url('/assets/template/img/industry/all.jpg')">
+                    <div class="industry__info">
+                        <div class="industry__caption">Все отрасли</div>
+                        <div class="industry__text">Сюда можно написать несколько слов об особенностях подбора кадров в данной сфере. Показать, что компания имеет опыт в ней</div>
+                        <div class="row">
+                            <div class="industry__sum columns six">от 20 000</div>
+                            <div class="industry__time columns six">от 3 раб.дн.</div>
+                        </div>
+                        <a href="#" class="industry__btn"><span>Подробнее</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-</div>
-
-<p>1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic neque, quibusdam reiciendis rem, ipsum aliquid repellendus fugiat illum temporibus expedita itaque doloribus dolores placeat vitae ad asperiores fugit ipsam et!</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic neque, quibusdam reiciendis rem, ipsum aliquid repellendus fugiat illum temporibus expedita itaque doloribus dolores placeat vitae ad asperiores fugit ipsam et!</p>
-<p class="zk">Женька привет</p>
 
 <div class="footer">
     <div class="container">
-
-        <div class="footer__logo columns" style="border: 1px red solid;">
+        <div class="footer__logo columns" -style="border: 1px red solid;">
             <img src="/assets/template/img/logo-white.png" alt="">
         </div>
-        <div class="columns footer__maim-menu" style="border: 1px red solid;">
+        <div class="columns footer__main-menu" -style="border: 1px red solid;">
             <ul class="">
                 <li><a href="#">Компания</a></li>
                 <li><a href="#">Услуги</a></li>
@@ -105,7 +223,7 @@
                 <li><a href="#">Контакты</a></li>
             </ul>
         </div>
-        <div class="columns five" style="border: 1px red solid;">
+        <div class="columns footer__service-menu" -style="border: 1px red solid;">
             <div class="footer__section">
                 <div class="footer__section-name"><a href="#">Подбор персонала</a></div>
                 <ul class="footer__section-list">
@@ -119,64 +237,16 @@
                 </ul>
             </div>
             <div class="footer__section">
+                <div class="footer__search">
+                    <input type="text" name="query" placeholder="Я ищу...">
+                    <button type="submit"></button>
+                </div>
                 <div class="footer__section-name"><a href="#">Соискателям</a></div>
             </div>
         </div>
-        <div class="columns footer__contacts" style="border: 1px red solid;">
-            <div class="footer__contacts-group uk-grid" uk-grid>
-                <div class="footer__phone">
-                    (499) 110-54-55
-                </div>
-                <div class="footer__address">
-                    Москва<br />
-                    Рязанский проспект<br />
-                    д. 32, к3, офис 307
-                </div>
-                <div class="footer__email">
-                    <a href="mailto:info@delovshtate.ru">info@delovshtate.ru</a>
-                </div>
-            </div>
-            <div class="button__call-footer uk-grid">
-                <a href="#" class="button">Заказать звонок</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="uk-container">
-         <div class="uk-grid-match uk-grid-small uk-text-center uk-grid" uk-grid>
-            <div class="uk-width-1-5@m">
-                <div class="footer__logo">
-                    <img src="/assets/template/img/logo-white.png" alt="">
-                </div>
-            </div>
-            <div class="uk-width-1-5@m">
-                <ul class="footer__maim-menu">
-                    <li><a href="#">Компания</a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Отзывы</a></li>
-                    <li><a href="#">Новости</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-            </div>
-            <div class="uk-width-expand@m">
-                <div class="footer__section">
-                    <div class="footer__section-name"><a href="#">Подбор персонала</a></div>
-                    <ul class="footer__section-list">
-                        <li><a href="#">Банковский сектор</a></li>
-                        <li><a href="#">Колл-центры</a></li>
-                        <li><a href="#">Финансовые услуги</a></li>
-                        <li><a href="#">Продажи</a></li>
-                        <li><a href="#">Бухгалтерия</a></li>
-                        <li><a href="#">Телекоммуникации</a></li>
-                        <li><a href="#">IT-отрасль</a></li>
-                    </ul>
-                </div>
-                <div class="footer__section">
-                    <div class="footer__section-name"><a href="#">Соискателям</a></div>
-                </div>
-            </div>
-            <div class="uk-width-1-5@m footer__contacts">
-                <div class="footer__contacts-group uk-grid" uk-grid>
+        <div class="columns footer__contacts" -style="border: 1px red solid;">
+            <div class="footer__col-height">
+                <div class="footer__contacts-group">
                     <div class="footer__phone">
                         (499) 110-54-55
                     </div>
@@ -189,17 +259,21 @@
                         <a href="mailto:info@delovshtate.ru">info@delovshtate.ru</a>
                     </div>
                 </div>
-                <div class="button__call-footer uk-grid">
-                    <a href="#" class="button">Заказать звонок</a>
-                </div>
             </div>
-         </div>
+            <div>
+                <a href="#" class="btn btn__call--footer">Заказать звонок</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="copyright__wrap">
+    <div class="container">
+        <div class="columns five ">© ООО «Дело в штате», 2017. Все права защищены</div>
+        <div class="columns four"><a href="#" class="police__link">Политика конфиденциальности</a></div>
+        <div class="columns three copyright__developer">Разработка сайта <a href="#">Creativelab.pro</a></div>
     </div>
 </div>
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.31/js/uikit.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.31/js/uikit-icons.min.js"></script>
 
     <script data-main="js/main" src="lib/require.js"></script>
 

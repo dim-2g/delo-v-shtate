@@ -1,44 +1,164 @@
 //= include/header.html
 
-<div class="uk-container">
-
-<div class="uk-grid-match uk-grid-small uk-text-center uk-grid" uk-grid>
-    <div class="uk-width-1-2@m" style="background-color: red">
-        <div class="">1-2@m</div>
+<div class="bnr">
+    <div class="bnr__top">
+        <div class="container">
+            <div class="bnr__people">
+                <div class="bnr__info">
+                    <div class="bnr__header">Грамотный подбор персонала<br />для всех отраслей</div>
+                    <div class="bnr__text">от 3 дней и от 20 000 руб</div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="uk-width-1-4@m"  style="background-color: green">
-        <div class="">1-4@m</div>
-    </div>
-    <div class="uk-width-1-4@m"  style="background-color: blue">
-        <div class="">1-4@m</div>
-    </div>
-    <div class="uk-width-1-5@m uk-hidden@l">
-        <div class="uk-card uk-card-secondary uk-card-body">1-5@m<br>hidden@l</div>
-    </div>
-    <div class="uk-width-1-5@m uk-width-1-3@l">
-        <div class="uk-card uk-card-default uk-card-body">1-5@m<br>1-3@l</div>
-    </div>
-    <div class="uk-width-3-5@m uk-width-2-3@l">
-        <div class="uk-card uk-card-default uk-card-body">3-5@m<br>2-3@l</div>
+    <div class="bnr__request">
+        <div class="container">
+            <div class="row">
+                <div class="columns five request__info">
+                    <div class="request__header">Оставьте заявку<br />на подбор специалиста</div>
+                    <div class="request__text">мы пришлем вам нескольких кандидатов на выбор</div>
+                </div>
+                <div class="columns six">
+                    <div class="request__forma">
+                        <form action="" method="post">
+                            <input type="text" name="name" placeholder="Контактное лицо*">
+                            <input type="text" name="phone" placeholder="+7 (___) __-__-__">
+                            <input type="text" name="email" placeholder="E-mail*">
+                            <input type="text" name="vacancy" placeholder="Название вакаснии">
+                            <input type="text" name="comment" placeholder="Оставьте ваш комментарий">
+                            <div class="request__file">
+                                <input type="file" id="request-file">
+                                <label for="request-file">
+                                    <span class="anketa">Анкета на подбор</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn">Найти специалиста</button>
+                            <div class="request__agree">
+                                <label>
+                                    <input class="checkbox" type="checkbox" name="checkbox-test">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="label">выражаю согласие на обработку персональных данных (политика конфиденциальности)</span>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="uk-grid-match uk-grid-small uk-text-center" uk-grid>
-    <div class="uk-width-auto@m uk-visible@l">
-        <div class="uk-card uk-card-primary uk-card-body">auto@m<br>visible@l</div>
-    </div>
-    <div class="uk-width-1-3@m">
-        <div class="uk-card uk-card-default uk-card-body">1-3@m</div>
-    </div>
-    <div class="uk-width-expand@m">
-        <div class="uk-card uk-card-default uk-card-body">expand@m</div>
+<div class="industry">
+    <div class="container">
+        <div class="block__header">Подбор кадров по отраслям</div>
+        <div class="row">
+            <div class="columns three">
+                <div class="industry__item" style="background-image: url('/assets/template/img/industry/bank.jpg')">
+                    <div class="industry__info">
+                        <div class="industry__caption"><span>Банковский сектор</span></div>
+                        <div class="industry__text">Сюда можно написать несколько слов об особенностях подбора кадров в данной сфере. Показать, что компания имеет опыт в ней</div>
+                        <div class="row">
+                            <div class="industry__sum columns six">от 20 000</div>
+                            <div class="industry__time columns six">от 3 раб.дн.</div>
+                        </div>
+                        <a href="#" class="industry__btn"><span>Подробнее</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="columns three">
+                <div class="industry__item" style="background-image: url('/assets/template/img/industry/finance.jpg')">
+                    <div class="industry__info">
+                        <div class="industry__caption">Финансовый сектор</div>
+                        <div class="industry__text">Сюда можно написать несколько слов об особенностях подбора кадров в данной сфере. Показать, что компания имеет опыт в ней</div>
+                        <div class="row">
+                            <div class="industry__sum columns six">от 20 000</div>
+                            <div class="industry__time columns six">от 3 раб.дн.</div>
+                        </div>
+                        <a href="#" class="industry__btn"><span>Подробнее</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="columns three">
+                <div class="industry__item" style="background-image: url('/assets/template/img/industry/buhgalteria.jpg')">
+                    <div class="industry__info">
+                        <div class="industry__caption">Бухгалтерия</div>
+                        <div class="industry__text">Сюда можно написать несколько слов об особенностях подбора кадров в данной сфере. Показать, что компания имеет опыт в ней</div>
+                        <div class="row">
+                            <div class="industry__sum columns six">от 20 000</div>
+                            <div class="industry__time columns six">от 3 раб.дн.</div>
+                        </div>
+                        <a href="#" class="industry__btn"><span>Подробнее</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="columns three">
+                <div class="industry__item" style="background-image: url('/assets/template/img/industry/it.jpg')">
+                    <div class="industry__info">
+                        <div class="industry__caption">IT-отрасль</div>
+                        <div class="industry__text">Сюда можно написать несколько слов об особенностях подбора кадров в данной сфере. Показать, что компания имеет опыт в ней</div>
+                        <div class="row">
+                            <div class="industry__sum columns six">от 20 000</div>
+                            <div class="industry__time columns six">от 3 раб.дн.</div>
+                        </div>
+                        <a href="#" class="industry__btn"><span>Подробнее</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="columns three">
+                <div class="industry__item" style="background-image: url('/assets/template/img/industry/call-centr.jpg')">
+                    <div class="industry__info">
+                        <div class="industry__caption">Колл-центры</div>
+                        <div class="industry__text">Сюда можно написать несколько слов об особенностях подбора кадров в данной сфере. Показать, что компания имеет опыт в ней</div>
+                        <div class="row">
+                            <div class="industry__sum columns six">от 20 000</div>
+                            <div class="industry__time columns six">от 3 раб.дн.</div>
+                        </div>
+                        <a href="#" class="industry__btn"><span>Подробнее</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="columns three">
+                <div class="industry__item" style="background-image: url('/assets/template/img/industry/sales.jpg')">
+                    <div class="industry__info">
+                        <div class="industry__caption">Продажи</div>
+                        <div class="industry__text">Сюда можно написать несколько слов об особенностях подбора кадров в данной сфере. Показать, что компания имеет опыт в ней</div>
+                        <div class="row">
+                            <div class="industry__sum columns six">от 20 000</div>
+                            <div class="industry__time columns six">от 3 раб.дн.</div>
+                        </div>
+                        <a href="#" class="industry__btn"><span>Подробнее</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="columns three">
+                <div class="industry__item" style="background-image: url('/assets/template/img/industry/tele.jpg')">
+                    <div class="industry__info">
+                        <div class="industry__caption">Телекоммуникации</div>
+                        <div class="industry__text">Сюда можно написать несколько слов об особенностях подбора кадров в данной сфере. Показать, что компания имеет опыт в ней</div>
+                        <div class="row">
+                            <div class="industry__sum columns six">от 20 000</div>
+                            <div class="industry__time columns six">от 3 раб.дн.</div>
+                        </div>
+                        <a href="#" class="industry__btn"><span>Подробнее</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="columns three">
+                <div class="industry__item" style="background-image: url('/assets/template/img/industry/all.jpg')">
+                    <div class="industry__info">
+                        <div class="industry__caption">Все отрасли</div>
+                        <div class="industry__text">Сюда можно написать несколько слов об особенностях подбора кадров в данной сфере. Показать, что компания имеет опыт в ней</div>
+                        <div class="row">
+                            <div class="industry__sum columns six">от 20 000</div>
+                            <div class="industry__time columns six">от 3 раб.дн.</div>
+                        </div>
+                        <a href="#" class="industry__btn"><span>Подробнее</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-</div>
-
-<p>1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic neque, quibusdam reiciendis rem, ipsum aliquid repellendus fugiat illum temporibus expedita itaque doloribus dolores placeat vitae ad asperiores fugit ipsam et!</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic neque, quibusdam reiciendis rem, ipsum aliquid repellendus fugiat illum temporibus expedita itaque doloribus dolores placeat vitae ad asperiores fugit ipsam et!</p>
-<p class="zk">Женька привет</p>
 
 //= include/footer.html
