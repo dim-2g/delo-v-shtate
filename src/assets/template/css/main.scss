@@ -161,11 +161,15 @@
     }
     &__logo{
         margin-top: 7px;
+        width: 23%;
+    }
+    &__contacts{
+        width: 19%;
     }
     &__maim-menu{
         text-align: left;
         list-style-type: none;
-        margin-left: 40px;
+        width: 15%;
         li{
             margin-bottom: 14px;
         }
