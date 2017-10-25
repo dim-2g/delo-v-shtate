@@ -10,7 +10,12 @@ a{
     color: $green;
   }
 }
-
+.container{
+  padding: 0 13px;
+  @media($bp-larger-than-mobile) {
+    padding: 0 20px;
+  }
+}
 .topline{
   background-color: $fon-gray;
   color: #fff;
@@ -365,6 +370,8 @@ input[type="checkbox"].checkbox {
   border: 1px solid #798079;
   border-radius: 0px;
   box-sizing: border-box;
+  line-height: 23px;
+  text-align: center;
 }
 
 .label {
