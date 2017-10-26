@@ -9,8 +9,12 @@
 //@import 'modules/page';
 
 
+body{
+    background: transparent url('/assets/template/img/body__bg.png') center 0 no-repeat;
+}
+
 .bnr{
-    box-shadow: 0 1px 12px 1px #cccccc;
+    box-shadow: $block-shadow-down;
     &__top{
         height: 425px;
         background: transparent url('/assets/template/img/bnr__bg.jpg') center 0 no-repeat;
@@ -66,7 +70,7 @@
         font-size: 16px;
     }
     &__forma{
-        margin: 28px auto 26px;
+        margin: 0px auto 26px;
         max-width: 560px;
         float: none;
         @media($bp-larger-than-desktophd){
@@ -213,7 +217,18 @@
     }
 }
 .industry{
-    padding: 108px 0;
+    padding: 108px 0 50px;
+    &__list{
+        max-width: 555px;
+        margin-left: auto;
+        margin-right:auto;
+        @media($bp-larger-than-desktop){
+            max-width: 860px;
+        }
+        @media($bp-larger-than-desktophd){
+            max-width: none;
+        }
+    }
     &__item-wrap{
         width: 50%;
         @media($bp-larger-than-desktop){
@@ -361,7 +376,7 @@
     &__item{
         width: 100%;
         float: none;
-        @media($bp-larger-than-desktop){
+        @media($bp-larger-than-tablet){
             width: 33%;
             float: left;
         }
@@ -539,12 +554,13 @@
     background-size: cover;
     &:before{
        content: "";
-       background-color: rgba(56,56,56,0.8);
+       background-color: rgb(56,56,56);
        position: absolute;
        top:0;
        left:0;
        right:0;
        bottom: 0;
+        opacity: 0.8;
     }   
     .block__header{
         color: #fff;
@@ -554,12 +570,13 @@
     position: relative;
     &:before{
        content: "";
-       background-color: rgba(56,56,56,0.8);
+       background-color: rgb(56,56,56);
        position: absolute;
        top:0;
        left:0;
        right:0;
        bottom: 0;
+        opacity: 0.8;
     }   
 }
 
@@ -750,6 +767,7 @@
 }
 
 .guarantee{
+    box-shadow: 0 2px 16px 8px #999;
     .block__header{
         margin-bottom: 38px;
         &:after{
@@ -792,6 +810,10 @@
             }
         }
     }
+    &.section-overlay::before{
+        background-color: #1f331f;
+    }
+
 }
 
 .lead{
@@ -804,7 +826,7 @@
         font-size: 18px;
         font-weight:500;
         text-align: center;
-        @media($bp-larger-than-tablet ) {
+        @media($bp-larger-than-mobile ) {
             font-size: 30px;
         }
     }
@@ -816,7 +838,7 @@
         margin-right: auto;
         top: -50px;
         position: relative;
-        line-height: 100%;
+        line-height: 25px;
         @media($bp-larger-than-tablet ) {
             top: 0;
             text-align: center;
@@ -1102,6 +1124,8 @@
         margin-right: auto;
         @media($bp-larger-than-mobile) {
             width: auto;
+        }
+        @media($bp-larger-than-desktop) {
             padding-right:25px;
         }
     }
@@ -1164,8 +1188,8 @@
         color: transparent;
     }
     button.slick-prev{
-        left: 0;
-        @media($bp-larger-than-mobile) {
+        left: 1%;
+        @media($bp-larger-than-desktop) {
             left: -8%;
         }
         &:before{
@@ -1180,8 +1204,8 @@
         }
     }
     button.slick-next{
-        right: 0;
-        @media($bp-larger-than-mobile) {
+        right: 1%;
+        @media($bp-larger-than-desktop) {
             right: -8%;
         }
         &:before{
@@ -1306,7 +1330,7 @@
         position: relative;
         z-index: 2;
         transition: $anim;
-        @media ($bp-larger-than-tablet) {
+        @media ($bp-larger-than-mobile) {
             font-size:18px;
             margin-bottom: 20px;
         }
@@ -1318,7 +1342,7 @@
         position: relative;
         z-index: 2;
         transition: $anim;
-        @media ($bp-larger-than-tablet) {
+        @media ($bp-larger-than-mobile) {
             font-size:14px;
         }
     }
@@ -1335,14 +1359,16 @@
         margin-bottom: 6px;
         font-size: 9px;
         margin-left: -8px;
+        @media ($bp-larger-than-mobile) {
+            font-size: 14px;
+            height: 30px;
+            line-height: 30px;
+        }
         @media ($bp-larger-than-tablet){
             position: absolute;
             top: 210px;
             left: 0;
             margin-bottom: 0px;
-            font-size: 14px;
-            height: 30px;
-            line-height: 30px;
             margin-left: 0px;
         }
     }
@@ -1383,7 +1409,7 @@
     line-height: 120%;
     padding-bottom: 20px;
     @media ($bp-larger-than-tablet){
-        padding-bottom: 30px;
+        padding-bottom: 50px;
     }
 }
 

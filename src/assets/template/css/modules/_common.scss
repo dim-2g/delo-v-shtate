@@ -6,14 +6,27 @@ body {
 }
 a{
   color: #2c3329;
+  text-decoration: none;
+  outline: none;
   &:hover{
     color: $green;
+    outline: none;
+  }
+  &:focus{
+    outline: none;
+  }
+  &:active{
+    outline: none;
   }
 }
 .container{
   padding: 0 13px;
+  width: 100%;
   @media($bp-larger-than-mobile) {
     padding: 0 20px;
+  }
+  @media($bp-larger-than-1170){
+    width: 80%;
   }
 }
 .topline{
@@ -21,27 +34,32 @@ a{
   color: #fff;
   &__address{
     font-weight: 300;
-    line-height: 30px;
+    line-height: 27px;
     min-height: 30px;
+    width: 77%;
     text-align: center;
   }
   &__anketa{
     line-height: 30px;
     min-height: 30px;
     position: relative;
-    padding-left: 50px;
+    width: 23%;
     text-align: center;
-    &:before{
-      content: "";
-      /*position: absolute;*/
-      display: inline-block;
-      margin-right: 30px;
-      height: 30px;
-      width: 30px;
-      left: 0;
-      vertical-align: middle;
-      @include sprite($print-white);
-    }
+
+  }
+}
+.anketa__link{
+  display: inline-block;
+  color: #fff;
+  position: relative;
+  &:before{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    left: -50px;
+    top: 2px;
+    vertical-align: middle;
+    @include sprite($print-white);
   }
 }
 .header{
@@ -51,7 +69,19 @@ a{
   &__body{
     padding: 25px 0 20px;
   }
+  &__logo{
+    width: 26%;
+    padding-right: 10px;
+    img{
+      max-width: 227px;
+      width: 100%;
+    }
+  }
+  &__center{
+    width: 51%;
+  }
   &__contacts{
+    width: 23%;
     text-align: center;
   }
   &__phone{
@@ -78,24 +108,32 @@ a{
       }
     }
   }
-
+  &__section-menu{
+    li:first-child{
+      text-align: left;
+    }
+  }
   &__section-menu li + li{
     border-left: 1px solid $gray-light;
   }
   &__section-menu a{
     font-size: 18px;
-    padding: 0 10px;
+    width: 160px;
     display: inline-block;
     transition: $anim;
     text-decoration: none;
+    text-align: left;
     &:hover{
       transition: $anim;
     }
   }
 }
 .top-menu__list{
-  display: flex; align-items: flex-start; flex-wrap: nowrap;
+
   width: 100%;
+  li:first-child{
+    text-align: left;
+  }
   > li{
     display: block;
     width: 40%;
@@ -112,8 +150,20 @@ a{
 .section-menu__list{
   width: 100%;
   list-style-type: none;
-  li{
+  @media($bp-larger-than-1170){
+    width: 86%;
+  }
+  li:first-child{
     text-align: center;
+    @media($bp-larger-than-1170){
+      text-align: left;
+    }
+  }
+  li:last-child{
+    text-align: center;
+    @media($bp-larger-than-1170){
+      text-align: right;
+    }
   }
 }
 .btn{
@@ -147,6 +197,14 @@ a{
   padding: 50px 0;
   a{
     color: #fff;
+    &:hover{
+      color: $green;
+    }
+  }
+  .btn{
+    &:hover{
+      color: #fff;
+    }
   }
   .button{
     min-width: 262px;
@@ -154,20 +212,16 @@ a{
   }
   &__logo{
     margin-top: 7px;
+    padding-right: 10px;
     @media($bp-larger-than-mobile){
-      width: 100%;
-    }
-    @media($bp-larger-than-phablet){
-      width: 100%;
-    }
-    @media($bp-larger-than-tablet){
-      width: 100%;
+      width: 33.3%;
     }
     @media($bp-larger-than-desktop){
-      width: 100%;
+      width: 26%;
     }
-    @media($bp-larger-than-desktophd){
-      width: 293px;
+    img{
+      width: 100%;
+      max-width: 197px;
     }
 
   }
@@ -178,19 +232,12 @@ a{
     text-align: left;
     list-style-type: none;
     @media($bp-larger-than-mobile){
-      width: 100%;
-    }
-    @media($bp-larger-than-phablet){
-      width: 100%;
-    }
-    @media($bp-larger-than-tablet){
-      width: 100%;
+      width: 33.3%;
+      text-align: center;
     }
     @media($bp-larger-than-desktop){
-      width: 100%;
-    }
-    @media($bp-larger-than-desktophd){
-      width: 160px;
+      width: 14%;
+      text-align: left;
     }
     ul{
       list-style-type: none;
@@ -203,20 +250,10 @@ a{
     }
   }
   &__service-menu{
-    @media($bp-larger-than-mobile){
-      width: 100%;
-    }
-    @media($bp-larger-than-phablet){
-      width: 100%;
-    }
-    @media($bp-larger-than-tablet){
-      width: 100%;
-    }
+    display: none;
     @media($bp-larger-than-desktop){
-      width: 100%;
-    }
-    @media($bp-larger-than-desktophd){
-      width: 420px;
+      display: block;
+      width: 38%;
     }
   }
   &__section{
@@ -231,7 +268,7 @@ a{
       margin-bottom: 22px;
       li{
         display: inline-block;
-        width: 49.5%;
+        width: 48.5%;
         margin-bottom: 12px;
         &:before{
           content: "•";
@@ -248,19 +285,10 @@ a{
   &__contacts{
     text-align: left;
     @media($bp-larger-than-mobile){
-      width: 100%;
-    }
-    @media($bp-larger-than-phablet){
-      width: 100%;
-    }
-    @media($bp-larger-than-tablet){
-      width: 100%;
+      width: 33.3%;
     }
     @media($bp-larger-than-desktop){
-      width: 100%;
-    }
-    @media($bp-larger-than-desktophd){
-      width: 277px;
+      width: 22%;
     }
   }
   &__contacts-group{
@@ -302,8 +330,9 @@ a{
     button{
       position: absolute;
       right: 5px;
-      top: 5px;
+      top: 9px;
       height: 30px;
+      line-height: 30px;
       width: 30px;
       padding: 6px;
       background: 0 none;
@@ -338,8 +367,32 @@ a{
       color: #fff;
     }
   }
+  &__text{
+    text-align: center;
+    margin-bottom: 8px;
+    @media($bp-larger-than-1170){
+      width: 42%;
+      text-align: left;
+      margin-bottom: 0px;
+    }
+  }
+  &__privacy{
+    text-align: center;
+    margin-bottom: 8px;
+    @media($bp-larger-than-1170){
+      width: 33%;
+      margin-bottom: 0px;
+    }
+  }
   &__developer{
-    text-align: right;
+    text-align: center;
+    margin-bottom: 8px;
+    @media($bp-larger-than-1170){
+      width: 25%;
+      text-align: right;
+      margin-bottom: 0px;
+    }
+
     a{
       color: $green;
     }

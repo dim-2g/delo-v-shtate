@@ -39,7 +39,7 @@ $(function() {
             infinite: true,
             responsive: [
                 {
-                    breakpoint: 1000,
+                    breakpoint: 750,
                     settings: {
                         slidesToShow: 1,
                         dots: false,
