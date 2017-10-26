@@ -54,7 +54,8 @@ var path = {
         sass: 'src/assets/template/css/**/*.scss',
         js: 'src/assets/template/js/**/*.js',
         tpl: 'src/assets/template/tpl/**/*.html',
-        sprites: 'src/assets/template/sprites/*.*'
+        sprites: 'src/assets/template/sprites/*.*',
+        sprites_ann: 'src/assets/template/sprites-ann/*.*',
     },
     clean: ['public', 'src/assets/template/css/main.css', 'src/assets/template/css/sprites/', 'src/assets/template/*.html']
 };
@@ -210,6 +211,19 @@ gulp.task('sprite:dev', function () {
   //return spriteData.pipe(gulp.dest(path.tmp.sprites));
 });
 
+gulp.task('sprite:ann', function () {
+    var spriteData = gulp.src('src/assets/template/sprites-ann/*.*').pipe(spritesmith({
+        imgName: 'sprite-ann.png',
+        imgPath: '/assets/template/css/sprites/sprite-ann.png',
+        cssName: 'sprite-ann.scss'
+    }));
+    var imgStream = spriteData.img
+        .pipe(gulp.dest(path.dev.sprites));
+    var cssStream = spriteData.css
+        .pipe(gulp.dest(path.dev.sprites));
+    return merge(imgStream, cssStream);
+});
+
 gulp.task('sprite:prod', function () {
   var spriteData = gulp.src(path.src.sprites).pipe(spritesmith({
     imgName: 'sprite.png',
@@ -241,6 +255,9 @@ gulp.task('watch', function(){
     watch([path.watch.sprites], function(event, cb) {
         gulp.start('sprite:dev');
     });
+    watch([path.watch.sprites_ann], function(event, cb) {
+        gulp.start('sprite:ann');
+    });
     //watch([path.watch.js, path.watch.tpl]).on('change', browserSync.reload);
 });
 
@@ -259,6 +276,7 @@ gulp.task('webserver:prod', function () {
 // Режим разработки
 gulp.task('develop', gulpsync.sync([
     'clean',
+    'sprite:ann',
     'sprite:dev',
     [
         'html:dev',

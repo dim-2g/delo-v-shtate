@@ -3,6 +3,7 @@
 @import 'skeleton/skeleton';
 /*@import 'materialize/sass/materialize';*/
 @import 'modules/variables';
+@import 'sprites/sprite-ann';
 @import 'sprites/sprite';
 @import 'modules/common';
 //@import 'modules/page';
@@ -143,10 +144,8 @@
             position: relative;
             &:before{
                 display: inline-block;
-                width: 23px;
-                height: 26px;
                 content: "";
-                //@include sprite($doc);
+                @include sprite($doc);
                 position: absolute;
                 left: 0;
             }
@@ -158,7 +157,7 @@
         max-width: 263px;
         margin-left: auto;
         margin-right: auto;
-        top: -50px;
+        top: -40px;
         position: relative;
         line-height: 100%;
         @media($bp-larger-than-tablet ) {
@@ -172,6 +171,7 @@
             @media($bp-larger-than-tablet ) {
                 display: inline;
                 width: auto;
+                line-height: 26px;
             }
         }
     }
@@ -290,7 +290,7 @@
             width: 16px;
             height: 21px;
             content: "";
-            //@include sprite($rub);
+            @include sprite($rub);
         }
     }
     &__time{
@@ -304,7 +304,7 @@
             width: 21px;
             height: 21px;
             content: "";
-           //@include sprite($clock);
+           @include sprite($clock);
         }
     }
     &__btn{
@@ -1386,3 +1386,6 @@
         padding-bottom: 30px;
     }
 }
+
+
+@import 'modules/ann';
