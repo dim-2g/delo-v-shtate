@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div>
-                <a href="#" class="btn btn__call--footer">Заказать звонок</a>
+                <a class="btn btn__call--footer open-popup-link" href="#callback-form">Заказать звонок</a>
             </div>
         </div>
     </div>
@@ -64,11 +64,41 @@
 </div>
 
 
+
+<div style="display: none;">
+    <div id="callback-form" class="callback-form">
+        <div class="callback-form__header">Перезвоним и ответим на все вопросы</div>
+        <div class="callback-form__forma">
+            <form action="" method="post">
+                <div class="row">
+                    <div class="columns callback-form__item">
+                        <input name="name" placeholder="Контактное лицо*" type="text">
+                    </div>
+                    <div class="columns callback-form__item">
+                        <input name="phone" placeholder="+7 (___) __-__-__" type="text">
+                    </div>
+                </div>
+                <div class="callback-form__agree">
+                    <label>
+                        <input class="checkbox" name="checkbox-test" type="checkbox">
+                        <span class="checkbox-custom"></span>
+                        <span class="label">выражаю согласие на обработку персональных данных (политика конфиденциальности)</span>
+                    </label>
+                </div>
+                <div class="callback-form__button">
+                    <button type="submit"  class="btn">Заказать звонок</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
     <script
         src="http://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
     <script src="assets/template/vendor/slick/slick.js"></script>
+    <script src="assets/template/vendor/magnific-popup/magnific-popup.js"></script>
     <script src="assets/template/js/scripts.js"></script>
 
 

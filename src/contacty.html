@@ -1,3 +1,132 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Главная страница</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/template/vendor/slick/slick.css">
+    <link rel="stylesheet" href="/assets/template/vendor/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/template/css/main.css">
+
+</head>
+<body>
+
+<div class="fly-menu">
+    <ul class="fly-menu__section">
+        <li><a href="#">Подбор персонала</a></li>
+        <li><a href="#">Соискателям</a></li>
+    </ul>
+    <ul class="fly-menu__list">
+        <li><a href="#">Компания</a></li>
+        <li><a href="#">Услуги и цены</a></li>
+        <li><a href="#">Отзывы</a></li>
+        <li><a href="#">Контакты</a></li>
+    </ul>
+    <a href="#" class="fly-menu__anketa">Анкета на подбор</a>
+</div>
+
+<div class="fly-search">
+    <div class="fly-search__box">
+        <form action="">
+            <input class="fly-search__text" placeholder="Поиск" name="query" type="text">
+            <button class="fly-search__btn" type="submit"></button>
+        </form>
+    </div>
+</div>
+<div class="header">
+    <div class="topline">
+        <div class="container">
+            <div class="topline__address columns">Москва, Рязанский проспект, д. 32, к3, оф. 307</div>
+            <div class="topline__right columns">
+                <a href="#" class="anketa__link">Анкета на подбор</a>
+                <a href="tel:84991105455" class="topline__phone">(499) 110-54-55</a>
+            </div>
+        </div>
+    </div>
+    <div class="header__body">
+        <div class="container">
+            <div class="burger columns toogle-menu"><span></span></div>
+            <div class="header__logo columns">
+                <a href="/"><img src="/assets/template/img/logo.png" alt=""></a>
+            </div>
+            <div class="header__center columns">
+                <div class="header__top-menu">
+                    <ul class="top-menu__list">
+                        <li class="active"><a href="#">Компания</a></li>
+                        <li><a href="#">Услуги и цены</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="header__section-menu">
+                    <ul class="section-menu__list">
+                        <li class="columns six"><a href="#">Подбор персонала</a></li>
+                        <li class="columns six"><a href="#">Соискателям</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header__contacts columns">
+                <div class="header__phone">(499) 110-54-55</div>
+                <div class="header__call">
+                    <a href="#callback-form" class="btn open-popup-link">Заказать звонок</a>
+                </div>
+                <div class="header__call--mobile">
+                    <a href="#callback-form" class="btn open-popup-link"></a>
+                </div>
+                <div class="header__search--mobile">
+                    <a href="#" class="btn toogle-search"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+.container
+    .row
+        .columns
+-->
+
+<div class="section-title" style="background-image: url('/assets/template/img-ann/section-title__contact.jpg')">
+    <div class="section-title__inner">Контакты</div>
+</div>
+<div class="crumbs">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a href="/">Главная</a></li>
+            <li class="active">Контакты</li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="content">
+    <div class="container">
+        <div class="contacts__list">
+            <div class="contact__info">
+                <div class="contact__item">
+                    <div class="contact__caption--location"> Москва</div>
+                    <div class="contact__value">Рязанский проспект, д. 32, к3, офис 307 </div>
+                </div>
+                <div class="contact__item">
+                    <div class="contact__caption--time">Режим работы:</div>
+                    <div class="contact__value">пн.-пт.: 9.00-18.00</div>
+                </div>
+                <div class="contact__item">
+                    <div class="contact__caption--phone">Телефон:</div>
+                    <div class="contact__value"> (499) 110-54-55</div>
+                </div>
+            </div>
+            <div class="contact__map">
+                <div class="contact__image">
+                    <img src="/assets/template/img-ann/map.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <div class="footer">
     <div class="container">
         <div class="footer__logo columns" -style="border: 1px red solid;">
@@ -93,7 +222,6 @@
     </div>
 </div>
 
-    <!-- @if NODE_ENV='development' -->
     <script
         src="http://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -101,12 +229,7 @@
     <script src="assets/template/vendor/slick/slick.js"></script>
     <script src="assets/template/vendor/magnific-popup/magnific-popup.js"></script>
     <script src="assets/template/js/scripts.js"></script>
-    <!-- @endif -->
 
-    <!-- @if NODE_ENV='production' -->
-    <script src="assets/template/vendor/jquery-3.2.1.slim.min.js"></script>
-    <script src="assets/template/js/scripts.js"></script>
-    <!-- @endif -->
 
 </body>
 </html>

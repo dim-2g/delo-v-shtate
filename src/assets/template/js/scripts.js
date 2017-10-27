@@ -53,6 +53,14 @@ $(function() {
     $('.toogle-menu').click(function(){
         $('.fly-menu').toggleClass('active');
     });
+    $('.toogle-search').click(function(){
+        $('.fly-search').toggleClass('active');
+    });
+
+
+    $('.open-popup-link').magnificPopup({
+        type:'inline'
+    });
 
 });
 $(window).resize(function(){

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- @if NODE_ENV='development' -->
     <link rel="stylesheet" href="/assets/template/vendor/slick/slick.css">
+    <link rel="stylesheet" href="/assets/template/vendor/magnific-popup/magnific-popup.css">
     <link rel="stylesheet" href="/assets/template/css/main.css">
     <!-- @endif -->
 
@@ -24,11 +25,19 @@
         <li><a href="#">Компания</a></li>
         <li><a href="#">Услуги и цены</a></li>
         <li><a href="#">Отзывы</a></li>
-        <li><a href="#">Отзывы</a></li>
+        <li><a href="#">Контакты</a></li>
     </ul>
     <a href="#" class="fly-menu__anketa">Анкета на подбор</a>
 </div>
 
+<div class="fly-search">
+    <div class="fly-search__box">
+        <form action="">
+            <input class="fly-search__text" placeholder="Поиск" name="query" type="text">
+            <button class="fly-search__btn" type="submit"></button>
+        </form>
+    </div>
+</div>
 <div class="header">
     <div class="topline">
         <div class="container">
@@ -51,7 +60,7 @@
                         <li class="active"><a href="#">Компания</a></li>
                         <li><a href="#">Услуги и цены</a></li>
                         <li><a href="#">Отзывы</a></li>
-                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="header__section-menu">
@@ -64,13 +73,13 @@
             <div class="header__contacts columns">
                 <div class="header__phone">(499) 110-54-55</div>
                 <div class="header__call">
-                    <a href="#" class="btn">Заказать звонок</a>
+                    <a href="#callback-form" class="btn open-popup-link">Заказать звонок</a>
                 </div>
                 <div class="header__call--mobile">
-                    <a href="#" class="btn"></a>
+                    <a href="#callback-form" class="btn open-popup-link"></a>
                 </div>
                 <div class="header__search--mobile">
-                    <a href="#" class="btn"></a>
+                    <a href="#" class="btn toogle-search"></a>
                 </div>
             </div>
         </div>
