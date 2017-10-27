@@ -50,6 +50,10 @@ $(function() {
     }
     sertificatySlider();
 
+    $('.toogle-menu').click(function(){
+        $('.fly-menu').toggleClass('active');
+    });
+
 });
 $(window).resize(function(){
     var width = $(window).width();

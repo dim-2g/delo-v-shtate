@@ -38,20 +38,49 @@ a{
     min-height: 30px;
     width: 77%;
     text-align: center;
+    font-size: 8px; 
+    @media ($bp-larger-than-mobile) {
+      line-height: 27px;
+      font-size: 12px;
+      line-height: 30px;
+    }
+    @media ($bp-larger-than-phablet) {
+      font-size: 14px;
+    }
+
   }
-  &__anketa{
+  &__right{
     line-height: 30px;
     min-height: 30px;
     position: relative;
     width: 23%;
     text-align: center;
-
+  }
+  &__phone{
+    color: #fff;  
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 27px;
+    vertical-align: top;
+    @media ($bp-larger-than-mobile) {
+      font-size: 12px;
+      vertical-align: baseline;
+    }
+    @media ($bp-larger-than-phablet) {
+      font-size: 14px;
+    }
+    @media ($bp-larger-than-tablet) {
+      display: none;
+    }
   }
 }
 .anketa__link{
-  display: inline-block;
   color: #fff;
   position: relative;
+  display: none;
+  @media ($bp-larger-than-tablet) {
+    display: inline-block;
+  }
   &:before{
     content: "";
     position: absolute;
@@ -61,33 +90,67 @@ a{
     vertical-align: middle;
     @include sprite($print-white);
   }
+
 }
 .header{
   box-shadow: 0 1px 2px 1px #e3e3e3;
   position: relative;
   z-index: 10;
   &__body{
-    padding: 25px 0 20px;
+    padding: 16px 0 9px;
+    min-height: 37px;
+    @media ($bp-larger-than-mobile) {
+      padding: 25px 0 1px;
+      min-height: 55px;
+    }
+    @media ($bp-larger-than-tablet) {
+      padding: 25px 0 20px;
+    }
   }
   &__logo{
-    width: 26%;
+    width: 44%;
     padding-right: 10px;
+    text-align: center;
+    @media ($bp-larger-than-tablet) {
+      width: 26%;
+      text-align: left;
+    }
     img{
-      max-width: 227px;
+      max-width: 130px;
       width: 100%;
+      margin-top: -7px;
+      @media ($bp-larger-than-mobile) {
+        max-width: 180px;
+        margin-top: -20px;
+      }
+      @media ($bp-larger-than-tablet) {
+        max-width: 227px;
+        margin-top: 0px;
+      }
     }
   }
   &__center{
     width: 51%;
+    display: none;
+    @media ($bp-larger-than-tablet) {
+      display: block;
+    }
   }
   &__contacts{
-    width: 23%;
+    width: 35%;
     text-align: center;
+    @media ($bp-larger-than-tablet) {
+      width: 23%;
+    }
   }
   &__phone{
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 12px;
+    display: none;
+    @media ($bp-larger-than-tablet) {
+      display: block;
+    }
   }
   &__top-menu{
     margin-bottom: 6px;
@@ -125,6 +188,95 @@ a{
     text-align: left;
     &:hover{
       transition: $anim;
+    }
+  }
+  .burger{
+    width: 21%;
+    height: 30px;
+    cursor: pointer;
+    display: block;
+    font-size: 30px;
+    opacity: 1;
+    padding: 0px;
+    z-index: 999;
+    line-height: 100%;
+    @media ($bp-larger-than-mobile) {
+      font-size: 36px;
+    }
+    @media ($bp-larger-than-tablet) {
+      display: none;
+    }
+
+    &:before{
+      content: "\f0c9";
+      font-family: FontAwesome;
+      color: $green;
+      line-height: 100%;
+    }
+  }
+  &__call{
+    display: none;
+    @media ($bp-larger-than-tablet) {
+      display: block;
+    }
+  }
+  &__call--mobile{
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 15px;
+    @media ($bp-larger-than-mobile) {
+      width: 36px;
+      height: 36px;
+    }
+    @media ($bp-larger-than-tablet) {
+      display: none;
+    }
+    a.btn{
+      padding: 0;
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      line-height: 27px;
+      @media ($bp-larger-than-mobile) {
+        line-height: 32px;
+      }
+      &:before{
+        vertical-align: middle;
+        display: inline-block;
+        content: "";
+        @include sprite($phone-white);
+      }
+    }
+  }
+  &__search--mobile{
+    width: 30px;
+    height: 30px;    
+    border-radius: 4px;
+    display: inline-block;
+    @media ($bp-larger-than-mobile) {
+      width: 36px;
+      height: 36px;
+    }
+    @media ($bp-larger-than-tablet) {
+      display: none;
+    }
+    a.btn{
+      padding: 0;
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      line-height: 27px;
+      @media ($bp-larger-than-mobile) {
+        line-height: 32px;
+      }
+      &:before{
+        vertical-align: middle;
+        display: inline-block;
+        content: "";
+        @include sprite($search-white);
+      }
     }
   }
 }
@@ -453,3 +605,74 @@ input[type="checkbox"].checkbox {
   left: 4px;
   color: #798079;
 }
+
+.fly-menu{
+  width: 196px;
+  padding-left: 1px;
+  background-color: rgba(255,255,255,0.9);
+  position: absolute;
+  top: 92px;
+  left: 0;
+  z-index: 100;
+  transform: translateX(-100%);
+  transition: $anim;
+  &.active{
+    transform: translateX(0);
+    transition: $anim;
+  }
+  @media ($bp-larger-than-mobile) {
+    top: 111px;
+  }
+  @media ($bp-larger-than-tablet) {
+    display: none;
+  }
+
+  &__section{
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: 8px;
+    li{
+      margin: 0;
+    }
+    a{
+      display: block;
+      padding: 6px 6px 6px 36px;
+      margin-bottom: 1px;
+      background-color: $green;
+      color: #fff;
+      font-weight: 500;
+    }
+  }
+  &__list{
+    list-style-type: none;
+    margin: 0;
+    li{
+      margin: 0;
+    }
+    a{
+      display: block;
+      padding: 7px 6px 8px 36px;
+      margin-bottom: 1px;
+      font-size: 12px;
+    }
+  }
+  &__anketa{
+    color: $green;
+    position: relative;
+    padding: 6px 6px 8px 72px;
+    font-size: 12px;
+    display: inline-block;
+    &:before{
+      content: "";
+      position: absolute;
+      display: inline-block;
+      left: 33px;
+      top: -1px;
+      vertical-align: middle;
+      @include sprite($doc);
+      transform: scale(0.75);
+    }
+
+  }
+}
+
