@@ -62,9 +62,57 @@ $(function() {
         type:'inline'
     });
 
+    collapseReview = function(num_def=3){
+        if ($(window).width()<750){
+            //сворачиваем отзывы
+            review_count = $('.review__item').length;
+            if (review_count>num_def) {
+                $('.review__item').each(function(ind){
+                    indx = ind+1;
+                    if (indx>num_def){
+                        $(this).addClass('review__item--hidden');
+                    }
+                });
+                $('.review__more').addClass('active');
+            }
+
+        }else{
+            //разворачиваем отзывы
+            $('.review__item').removeClass('review__item--hidden');
+            $('.review__more').removeClass('active');
+        }
+        return true;
+    }
+    collapseReview(3);
+
+    showReview = function(num_def=3){
+        reviews = $('.review__item--hidden');
+        review_count = reviews.length;
+        if (review_count){
+            reviews.each(function(ind){
+                indx = ind;
+                if (indx<num_def){
+                    $(this).removeClass('review__item--hidden');
+                }
+            });
+        }
+
+        review_count = $('.review__item--hidden').length;
+        if (!review_count){
+            $('.review__more').removeClass('active');
+        }
+
+
+    }
+
+    $('.review-more').click(function(){
+        showReview(3);
+        return false;
+    });
+
 });
 $(window).resize(function(){
     var width = $(window).width();
-
+    //collapseReview(1);
     stepsSlider();
 });

@@ -28,6 +28,15 @@ button{
     outline: none;
   }
 }
+h2{
+  font-size: 24px;
+  font-weight: 500;
+}
+.stext{
+  h2 {
+    margin-top: 35px;
+  }
+}
 .container{
   padding: 0 13px;
   width: 100%;
@@ -45,16 +54,16 @@ button{
     font-weight: 300;
     line-height: 27px;
     min-height: 30px;
-    width: 77%;
+    width: 66.67%;
     text-align: center;
-    font-size: 8px; 
+    font-size: 9px;
     @media ($bp-larger-than-mobile) {
-      line-height: 27px;
-      font-size: 12px;
+      font-size: 11px;
       line-height: 30px;
     }
     @media ($bp-larger-than-phablet) {
       font-size: 14px;
+      width: 77%;
     }
 
   }
@@ -62,17 +71,19 @@ button{
     line-height: 30px;
     min-height: 30px;
     position: relative;
-    width: 23%;
+    width: 33.33%;
     text-align: center;
+    @media ($bp-larger-than-phablet) {
+      width: 23%;
+    }
   }
   &__phone{
-    color: #fff;  
+    color: #fff;
     font-weight: 500;
-    font-size: 8px;
+    font-size: 12px;
     line-height: 27px;
     vertical-align: top;
     @media ($bp-larger-than-mobile) {
-      font-size: 12px;
       vertical-align: baseline;
     }
     @media ($bp-larger-than-phablet) {
@@ -263,7 +274,7 @@ button{
   }
   &__search--mobile{
     width: 30px;
-    height: 30px;    
+    height: 30px;
     border-radius: 4px;
     display: inline-block;
     @media ($bp-larger-than-mobile) {
@@ -301,6 +312,7 @@ button{
     display: block;
     width: 40%;
     text-align: center;
+    line-height: 16px;
     @media ($bp-larger-than-phablet) {
       display: table-cell;
     }
@@ -363,6 +375,7 @@ button{
   }
   a{
     color: #fff;
+    transition: $anim;
     &:hover{
       color: $green;
     }
@@ -898,3 +911,4 @@ input[type="checkbox"].checkbox {
   background-color: #76a14e;
   transition: all 0.2s ease 0s;
 }
+
