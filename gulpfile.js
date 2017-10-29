@@ -20,7 +20,9 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     rename = require('gulp-rename'),
     rigger = require('gulp-rigger'),
-    plumber = require('gulp-plumber');
+    plumber = require('gulp-plumber'),
+    gcmq = require('gulp-group-css-media-queries'),
+    cleanCSS = require('gulp-clean-css');
 
 // Пути для сборки
 var path = {
@@ -105,6 +107,7 @@ gulp.task('sass:prod', ['sprite:prod'], function() {
     return gulp.src(path.src.sass)
         .pipe(sass())
         //сохраняем в css
+        //.pipe(cleanCSS({level: '2'}))
         .pipe(gulp.dest(path.build.css))
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(rename({suffix: '.min'}))
