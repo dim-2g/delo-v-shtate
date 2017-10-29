@@ -51,8 +51,11 @@ $(function() {
     sertificatySlider();
 
     $('.toogle-menu').click(function(){
-        $('.fly-menu').toggleClass('active');
+        var header = $('.header__body');
+        menu_top = header.position().top + header.outerHeight();
+        $('.fly-menu').css({'top':menu_top}).toggleClass('active');
     });
+
     $('.toogle-search').click(function(){
         $('.fly-search').toggleClass('active');
     });
@@ -110,9 +113,44 @@ $(function() {
         return false;
     });
 
+    //заадем высоту хедеру, чтобы при установки позиции фиксед не дергался сайт
+    setHeightHeader = function(){
+        var header_height = $('.header').outerHeight();
+        $('.header').css({'min-height':header_height});
+    }
+    setHeightHeader();
+
+
 });
 $(window).resize(function(){
     var width = $(window).width();
     //collapseReview(1);
     stepsSlider();
+
+});
+
+setFixedHeader = function(){
+    var header = $('.header__body');
+    var header_relative = $('.header__body').not('.slideTop');
+    var relative_bottom = 0;
+    if (header_relative.length>0){
+        relative_bottom = header_relative.offset().top + header_relative.outerHeight();
+    }
+    var scroll = $(window).scrollTop();
+    if ((relative_bottom+50)<scroll) {
+        $('body').addClass('fixed-header');
+    }else{
+        $('body').removeClass('fixed-header');
+    }
+    //чтобы плавно выезжал
+    if (relative_bottom<scroll) {
+        header.addClass('slideTop');
+    }else{
+        header.removeClass('slideTop');
+    }
+};
+
+
+$(document).scroll(function(){
+    setFixedHeader();
 });

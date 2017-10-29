@@ -114,13 +114,17 @@ h2{
 
 }
 .header{
-  box-shadow: 0 4px 4px -3px #e3e3e3;
+  //box-shadow: 0 4px 4px -3px #e3e3e3;
   position: relative;
   background: #fff;
   z-index: 10;
   &__body{
     padding: 16px 0 2px;
     min-height: 44px;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 4px 4px -3px #e3e3e3;
+    transform: translateY(0);
     @media ($bp-larger-than-mobile) {
       padding: 25px 0 1px;
       min-height: 55px;
@@ -168,7 +172,7 @@ h2{
   &__phone{
     font-size: 16px;
     font-weight: 500;
-    margin-bottom: 12px;
+    margin-bottom: 9px;
     display: none;
     @media ($bp-larger-than-tablet) {
       display: block;
@@ -176,6 +180,7 @@ h2{
   }
   &__top-menu{
     margin-bottom: 6px;
+    margin-top: 4px;
     ul{
       list-style-type: none;
     }
@@ -325,6 +330,8 @@ h2{
 .section-menu__list{
   width: 100%;
   list-style-type: none;
+  margin-top:18px;
+  margin-bottom: 0;
   @media($bp-larger-than-1170){
     width: 86%;
   }
@@ -681,7 +688,7 @@ input[type="checkbox"].checkbox {
   width: 196px;
   padding-left: 1px;
   background-color: rgba(255,255,255,0.9);
-  position: absolute;
+  position: fixed;
   top: 92px;
   left: 0;
   z-index: 100;
@@ -912,3 +919,16 @@ input[type="checkbox"].checkbox {
   transition: all 0.2s ease 0s;
 }
 
+body{
+  .slideTop {
+    transform: translateY(-100%);
+  }
+  &.fixed-header {
+    .slideTop {
+      transform: translateY(0%);
+      position: fixed;
+      top: 0;
+      transition: all 0.5s ease 0s;
+    }
+  }
+}
