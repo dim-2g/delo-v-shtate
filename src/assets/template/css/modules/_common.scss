@@ -63,7 +63,12 @@ h2{
     }
     @media ($bp-larger-than-phablet) {
       font-size: 14px;
-      width: 77%;
+      //width: 77%;
+    }
+    @media ($bp-larger-than-tablet) {
+      width: 51%;
+      text-align: left;
+      margin-left: 26% !important;
     }
 
   }
@@ -73,7 +78,7 @@ h2{
     position: relative;
     width: 33.33%;
     text-align: center;
-    @media ($bp-larger-than-phablet) {
+    @media ($bp-larger-than-tablet) {
       width: 23%;
     }
   }
@@ -515,7 +520,7 @@ h2{
     }
   }
   &__address{
-    font-size: 12px;
+    font-size: 13px;
     line-height: 145%;
     margin-bottom: 14px;
     text-align: center;
@@ -527,7 +532,7 @@ h2{
   }
   &__email{
     text-align: center;
-    font-size: 12px;
+    font-size: 13px;
     margin-bottom: 20px;
     @media($bp-larger-than-phablet){
       margin-bottom: 0px;
@@ -663,7 +668,7 @@ input[type="checkbox"].checkbox {
   vertical-align: middle;
   color: #7b8079;
   font-weight: normal;
-  font-size: 12px;
+  font-size: 13px;
   padding-left: 40px;
 }
 .checkbox-custom{

@@ -15,37 +15,52 @@
     <div class="bnr__request">
         <div class="container">
             <div class="row">
-                <div class="columns -five request__info">
+                <div class="columns request__info">
                     <div class="request__header">Оставьте заявку <br />на подбор специалиста</div>
                     <div class="request__text">мы пришлем вам нескольких кандидатов на выбор</div>
                 </div>
-                <div class="columns request__forma">
-                    <div class="-request__forma">
+                <div class="columns request-forma">
+
                         <form action="" method="post">
-                            <input type="text" name="name" placeholder="Контактное лицо*">
-                            <input type="text" name="phone" placeholder="+7 (___) __-__-__">
-                            <input type="text" name="email" placeholder="E-mail*">
-                            <input type="text" name="vacancy" placeholder="Название вакаснии">
-                            <textarea name="comment" placeholder="Оставьте ваш комментарий"></textarea>
-                            <div class="request__file">
-                                <input type="file" id="request-file">
-                                <label for="request-file">
-                                    <span class="anketa">Анкета на подбор</span>
-                                </label>
-                            </div>
-                            <div class="request__button">
-                                <button type="submit" class="btn">Найти специалиста</button>
-                            </div>
-                            <div class="request__agree">
-                                <label>
-                                    <input class="checkbox" type="checkbox" name="checkbox-test">
-                                    <span class="checkbox-custom"></span>
-                                    <span class="label">выражаю согласие на обработку персональных данных (политика конфиденциальности)</span>
-                                </label>
+                            <div class="request-forma__form row">
+                                <div class="columns request-forma__item">
+                                    <input type="text" name="name" placeholder="Контактное лицо*">
+                                </div>
+                                <div class="columns request-forma__item">
+                                    <input type="text" name="phone" placeholder="+7 (___) __-__-__">
+                                </div>
+                                <div class="columns request-forma__item">
+                                    <input type="text" name="email" placeholder="E-mail*">
+                                </div>
+                                <div class="columns request-forma__item">
+                                    <input type="text" name="vacancy" placeholder="Название вакаснии">
+                                </div>
+                                <div class="columns request-forma__item--width">
+                                    <textarea name="comment" placeholder="Оставьте ваш комментарий"></textarea>
+                                </div>
+                                <div class="columns request-forma__item">
+                                    <div class="request-forma__file">
+                                        <input type="file" id="service-file">
+                                        <label for="service-file">
+                                            <span class="anketa">Прикрепить резюме</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="columns request-forma__item request-forma__button">
+                                    <button type="submit" class="btn">Найти специалиста</button>
+                                </div>
+                                <div class="columns request-forma__agree">
+                                    <label>
+                                        <input class="checkbox" name="checkbox-test" type="checkbox">
+                                        <span class="checkbox-custom"></span>
+                                        <span class="label">выражаю согласие на обработку персональных данных (политика конфиденциальности)</span>
+                                    </label>
+                                </div>
                             </div>
                         </form>
-                    </div>
                 </div>
+
+
             </div>
         </div>
     </div>

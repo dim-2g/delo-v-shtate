@@ -60,7 +60,7 @@ body.arrow{
         }
     }
     &__text{
-        font-size:12px;
+        font-size:13px;
         @media ($bp-larger-than-mobile) {
           font-size: 18px;
         }
@@ -80,13 +80,13 @@ body.arrow{
         padding-bottom: 24px;
         text-align: center;
         @media ($bp-larger-than-mobile) {
-          padding-left: 32px;
           padding-top: 55px;
           padding-bottom: 30px;
         }
         @media($bp-larger-than-desktophd){
-          width: 41.66667%;
-          text-align: left;
+            padding-left: 0px;
+            width: 41.66667%;
+            text-align: left;
         }
     }
     &__header{
@@ -108,99 +108,105 @@ body.arrow{
         }
     }
     &__text{
-        font-size: 12px;
+        font-size: 13px;
         @media ($bp-larger-than-mobile) {
           font-size: 16px;
         }
     }
-    &__forma{
-        margin: 0px auto 64px;
-        max-width: 560px;
-        float: none;
-        @media($bp-larger-than-desktophd){
-          width: 50%;
-          margin: 28px 0 26px;
-          max-width: auto;
-          float: left;
+
+}
+.request-forma{
+    margin: 0px auto 64px;
+    max-width: 560px;
+    float: none;
+    @media($bp-larger-than-desktophd){
+        width: 58%;
+        margin: 28px 0 26px;
+        max-width: auto;
+        float: left;
+    }
+    &__item{
+        text-align: center;
+        box-sizing: border-box;
+        @media($bp-larger-than-tablet ) {
+            width: 50%;
+            padding-right: 10px;
         }
-        input{
-            &[type="text"]{
-                float: left;
-                width: 263px;
-                height: 34px;
-                border: 1px solid $gray-light;
-                font-style: italic;
-                box-sizing: border-box;
-                margin-bottom: 17px;
-                @media ($bp-larger-than-mobile) {
-                    margin-bottom: 21px;
-                }
-            }
-            &[name="name"]{
-                margin-right: 31px;
-            }
-            &[name="email"]{
-                margin-right: 31px;
-            }
-            &[name="comment"]{
-                clear: both;
-                width: 557px;
-            }
-            &[name="vacancy"]{
-                font-size:16px;
-            }
-            &[type="file"]{
-                display: none;
-            }
-            button{
-                width: 263px;
-            }
-        }
-        textarea{
-            clear: both;
-            width: 263px;
-            height: 60px;
-            min-height: 34px;
-            border: 1px solid $gray-light;
-            font-style: italic;
-            box-sizing: border-box;
-            margin-bottom: 17px;
-            resize: none;
-            overflow: hidden;
-            @media ($bp-larger-than-mobile) {
-                margin-bottom: 21px;
-                height: 75px;
-            }
-            @media($bp-larger-than-tablet ){
-                width: 557px;
-                height: 34px;
-            }
-        }
-        form{
-            max-width: 263px;
-            margin-left: auto;
-            margin-right: auto;
-            @media($bp-larger-than-tablet ){
-                width: 100%;
-                max-width: none;
+        &--width{
+            width: 100%;
+            @media($bp-larger-than-tablet ) {
+                padding-right: 10px;
             }
         }
     }
+    input{
+        &[type="text"]{
+            float: left;
+            width: 100%;
+            height: 34px;
+            border: 1px solid $gray-light;
+            font-style: italic;
+            box-sizing: border-box;
+            margin-bottom: 21px;
+        }
+        &[name="name"]{
+            margin-right: 28px;
+        }
+        &[name="email"]{
+            margin-right: 28px;
+        }
+        &[name="comment"]{
+            clear: both;
+            width: 476px;
+        }
+        &[name="vacancy"]{
+            font-size:16px;
+        }
+        &[type="file"]{
+            display: none;
+        }
+        button{
+            width: 263px;
+        }
+    }
+    textarea{
+        clear: both;
+        width: 100%;
+        height: 75px;
+        min-height: 34px;
+        border: 1px solid $gray-light;
+        font-style: italic;
+        box-sizing: border-box;
+        margin-bottom: 21px;
+        resize: none;
+        overflow: hidden;
+        @media($bp-larger-than-tablet ){
+            width: 100%;
+            height: 34px;
+        }
+    }
+    form{
+        max-width: 263px;
+        margin-left: auto;
+        margin-right: auto;
+        @media($bp-larger-than-tablet ){
+            width: 100%;
+            max-width: none;
+        }
+    }
     &__file{
-        width: 263px;
+        width: 100%;
         margin-right: 31px;
         float: left;
         clear: both;
-        display: none;
-        @media ($bp-larger-than-mobile) {
-            display: block;
-        }
         label{
             font-weight:normal;
             font-size: 16px;
             padding-left: 48px;
             padding-top: 3px;
             position: relative;
+            text-align: left;
+            cursor: pointer;
             &:before{
                 display: inline-block;
                 content: "";
@@ -212,40 +218,51 @@ body.arrow{
     }
     &__agree {
         clear: both;
-        margin-top: 8px;
-        max-width: 263px;
+        margin-top: 30px;
+        //max-width: 234px;
         margin-left: auto;
         margin-right: auto;
-        top: -40px;
+        top: -50px;
         position: relative;
         line-height: 100%;
         @media($bp-larger-than-tablet ) {
             top: 0;
-            text-align: left;
+            //text-align: center;
             max-width: none;
+        }
+        @media($bp-larger-than-desktophd){
+            margin-top: 30px;
         }
         .label{
             display: inline-block;
             width: 200px;
             @media($bp-larger-than-tablet ) {
-                display: inline;
-                width: auto;
-                line-height: 26px;
+                display: inline-block;
+                width: 360px;
+            }
+            @media($bp-larger-than-desktophd){
+                width: 100%;
+                line-height: 24px;
             }
         }
     }
     &__button{
-        bottom: -79px;
+        bottom: -70px;
         position: relative;
         @media($bp-larger-than-tablet ) {
             bottom: 0;
         }
     }
     .btn{
-        float: left;
+        float: none;
+        max-width: 100%;
+        @media($bp-larger-than-tablet ) {
+            float: left;
+        }
     }
-
 }
+
+
 .block__header{
     color: #293329;
     font-size:18px;
@@ -511,7 +528,7 @@ body.arrow{
         }
     }
     &__caption{
-        font-size: 12px;
+        font-size: 13px;
         font-weight: 500;
         margin-bottom: 3px;
         @media ($bp-larger-than-mobile) {
@@ -521,7 +538,8 @@ body.arrow{
     }
     &__hint{
         margin-top: -4px;
-        font-size: 10px;
+        font-size: 12px;
+        margin-bottom: 2px;
         @media ($bp-larger-than-mobile) {
             font-size: 12px;
         }
@@ -533,7 +551,7 @@ body.arrow{
         }
     }
     &__value{
-        font-size: 12px;
+        font-size: 13px;
         @media ($bp-larger-than-mobile) {
             font-size: 18px;
         }
@@ -623,7 +641,8 @@ body.arrow{
     }
     &__regard{
         text-align: center;
-        font-size: 12px;
+        font-size: 13px;
+        line-height: 120%;
         padding-left: 30px;
         position: relative;
         @media ($bp-larger-than-phablet){
@@ -643,7 +662,7 @@ body.arrow{
     //background: transparent url('/assets/template/img/advantages__bg.jpg') center bottom no-repeat;
     background-size: cover;
     padding: 28px 0;
-    font-size: 12px;    
+    font-size: 13px;
     line-height: 135%;
     box-sizing: border-box;
     @media ($bp-larger-than-mobile) {
@@ -654,7 +673,7 @@ body.arrow{
         font-size: 18px;    
     }
     &__item{
-        padding-left: 84px;
+        padding-left: 70px;
         margin-bottom: 30px;
         position: relative;
         max-width: 330px;
@@ -682,7 +701,7 @@ body.arrow{
         &:after{
             position: absolute;
             top: -6px;
-            left: 12px;
+            left: 4px;
             @include sprite($advantages-icon);
             content: ""; 
             display: inline-block;
@@ -698,7 +717,7 @@ body.arrow{
         font-weight: 500;
         margin-bottom: 7px;
         @media ($bp-larger-than-mobile) {
-            margin-bottom: 12px;
+            margin-bottom: 13px;
         }
     }
     .block__header {
@@ -840,7 +859,7 @@ body.arrow{
     }
     &__text{
         position: relative;
-        font-size: 12px;
+        font-size: 13px;
         &:after{
             position: absolute;
             width: 118px;
@@ -946,7 +965,7 @@ body.arrow{
     }
     .block__header{
         margin-bottom: 6px;
-        font-size: 12px;
+        font-size: 16px;
         @media ($bp-larger-than-mobile) {
             font-size: 24px;
             margin-bottom: 38px;
@@ -960,14 +979,13 @@ body.arrow{
     &__text{
         text-align: center;
         color: #fff;
-        font-size: 10px;
+        font-size: 13px;
         line-height: 100%;
         @media($bp-larger-than-mobile) {
             font-size: 18px;
-            font-size: 12px;
         }
         p{
-            font-size: 10px;
+            font-size: 13px;
             color: #fff;
             margin-bottom: 3px;
             padding: 0;
@@ -978,7 +996,7 @@ body.arrow{
             }
         }
         h2,h3,h4{
-            font-size: 10px;
+            font-size: 13px;
             margin-bottom: 3px;
             padding: 0;
             font-weight: 500;
@@ -1027,7 +1045,7 @@ body.arrow{
         max-width: 263px;
         margin-left: auto;
         margin-right: auto;
-        top: -50px;
+        top: -40px;
         position: relative;
         line-height: 25px;
         @media($bp-larger-than-tablet ) {
@@ -1045,7 +1063,7 @@ body.arrow{
         }
     }
     &__hint{
-        font-size: 12px;
+        font-size: 13px;
         text-align: center;
         @media($bp-larger-than-tablet ) {
             display: none;
@@ -1154,7 +1172,7 @@ body.arrow{
         }
     }
     &__staff{
-        font-size: 12px;
+        font-size: 14px;
         margin-bottom:12px;
         font-weight: 500;
         @media($bp-larger-than-mobile) {
@@ -1163,13 +1181,13 @@ body.arrow{
         }
     }
     &__name{
-        font-size: 12px;
+        font-size: 14px;
         @media($bp-larger-than-mobile) {
             font-size: 18px;
         }
     }
     &__left{
-        font-size: 10px;
+        font-size: 13px;
         padding-right: 30px;
         box-sizing: border-box;
         display: block;
@@ -1239,7 +1257,7 @@ body.arrow{
             z-index: 2;
             display: inline-block;
             vertical-align: middle;
-            font-size: 11px;
+            font-size: 13px;
             @media($bp-larger-than-mobile) {
                 font-size: 14px;
             }
@@ -1333,7 +1351,7 @@ body.arrow{
 
     }
     &__author{
-        font-size: 11px;
+        font-size: 13px;
         font-weight: 500;
         margin-bottom: 20px;
         text-align: center;
@@ -1345,11 +1363,13 @@ body.arrow{
         }
     }
     &__text{
-        font-size: 8.56px;
+        font-size: 13px;
         line-height: 120%;
         overflow: hidden;
         text-align: center;
+        display: none;
         @media($bp-larger-than-mobile) {
+            display: block;
             font-size: 14px;
         }
         @media($bp-larger-than-1170) {
@@ -1521,7 +1541,7 @@ body.arrow{
         text-decoration: none;
     }
     &__caption{
-        font-size:12px;
+        font-size:13px;
         font-weight:500;
         margin-bottom: 10px;
         line-height: 120%;
@@ -1534,7 +1554,7 @@ body.arrow{
         }
     }
     &__anons{
-        font-size:10px;
+        font-size:13px;
         line-height: 120%;
         margin-bottom: 20px;
         position: relative;
@@ -1549,13 +1569,13 @@ body.arrow{
         border-radius: 1px;
         color: #fff;
         height: 18px;
-        line-height: 18px;
+        line-height: 120%;
         padding: 2px 12px;
         display: inline-block;
         box-sizing: border-box;
         z-index: 2;
         margin-bottom: 6px;
-        font-size: 9px;
+        font-size: 12px;
         margin-left: -8px;
         @media ($bp-larger-than-mobile) {
             font-size: 14px;
@@ -2199,8 +2219,12 @@ body.arrow{
         z-index: 2;
         width: 45%;
         position: relative;
+        margin-left: auto;
+        margin-right:auto;
+        float: none;
         @media($bp-larger-than-mobile){
             width: 50%;
+            float: left;
         }
         img{
             height:auto;
@@ -2213,13 +2237,15 @@ body.arrow{
         position: relative;
         padding-left: 15px;
         width: 55%;
+        display: none;
         @media($bp-larger-than-mobile){
             padding-left: 30px;
             width: 50%;
+            display: block;
         }
     }
     &__name{
-        font-size: 12px;
+        font-size: 13px;
         margin-bottom: 20px;
         padding-top: 5px;
         font-weight: 500;
@@ -2233,7 +2259,7 @@ body.arrow{
         }
     }
     &__text{
-        font-size: 9px;
+        font-size: 13px;
         line-height: 120%;
         padding-bottom: 25px;
         @media($bp-larger-than-mobile){
@@ -2450,7 +2476,7 @@ body.arrow{
     }
     &__name{
         display: table-cell;
-        font-size: 12px;
+        font-size: 13px;
         font-weight: 500;
         line-height: 120%;
         @media($bp-larger-than-mobile){
