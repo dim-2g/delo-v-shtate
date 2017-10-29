@@ -65,6 +65,10 @@ $(function() {
         type:'inline'
     });
 
+    $('.img-link').magnificPopup({
+        type  : 'image'
+    });
+
     collapseReview = function(num_def=3){
         if ($(window).width()<750){
             //сворачиваем отзывы
