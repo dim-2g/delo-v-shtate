@@ -69,9 +69,10 @@ $(function() {
         type  : 'image'
     });
 
-    collapseReview = function(num_def=3){
+    collapseReview = function(){
         if ($(window).width()<750){
             //сворачиваем отзывы
+            var num_def=3;
             review_count = $('.review__item').length;
             if (review_count>num_def) {
                 $('.review__item').each(function(ind){
@@ -92,7 +93,8 @@ $(function() {
     }
     collapseReview(3);
 
-    showReview = function(num_def=3){
+    showReview = function(){
+        var num_def=3;
         reviews = $('.review__item--hidden');
         review_count = reviews.length;
         if (review_count){
@@ -113,7 +115,7 @@ $(function() {
     }
 
     $('.review-more').click(function(){
-        showReview(3);
+        showReview();
         return false;
     });
 
@@ -136,22 +138,31 @@ $(window).resize(function(){
 setFixedHeader = function(){
     var header = $('.header__body');
     var header_relative = $('.header__body').not('.slideTop');
-    var relative_bottom = 0;
+
     if (header_relative.length>0){
         relative_bottom = header_relative.offset().top + header_relative.outerHeight();
+        relative_top = header_relative.offset().top;
+    }else{
+        if (!relative_bottom){
+            relative_bottom = 0;
+        }
+        if (!relative_top){
+            relative_top = 0;
+        }
     }
     var scroll = $(window).scrollTop();
-    if ((relative_bottom+50)<scroll) {
-        $('body').addClass('fixed-header');
-    }else{
-        $('body').removeClass('fixed-header');
-    }
     //чтобы плавно выезжал
     if (relative_bottom<scroll) {
         header.addClass('slideTop');
-    }else{
+        setTimeout(function(){
+            $('body').addClass('fixed-header');
+        });
+    }
+    if (relative_top>scroll) {
+        $('body').removeClass('fixed-header');
         header.removeClass('slideTop');
     }
+
 };
 
 
