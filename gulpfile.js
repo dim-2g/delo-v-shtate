@@ -292,6 +292,7 @@ gulp.task('develop', gulpsync.sync([
 // Режим production
 gulp.task('production', gulpsync.sync([
     'clean',
+    'sprite:dev',
     [
         'html:prod',
         'sass:prod',

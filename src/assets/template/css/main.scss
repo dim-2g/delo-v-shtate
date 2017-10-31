@@ -436,48 +436,63 @@ body.arrow-small{
         }
     }
     &__btn{
-        width: 155px;
-        height: 36px;
-        line-height:32px;
-        text-align: center;
-        border-radius: 5px;
-        border: 1px #fff solid;
-        display: block;
-        color: #fff;
-        font-size: 18px;
-        font-weight: 500;
-        margin:27px auto 0;
-        box-sizing: border-box;
-        position: relative;
-        text-decoration: none;
-        span{
-            z-index: 2;
-            position: relative;
-        }
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        color: transparent;
+        background: transparent;
         &:hover{
+            color: transparent;
+        }
+        @media ($bp-larger-than-mobile) {
+            width: 155px;
+            height: 36px;
+            line-height: 32px;
+            text-align: center;
+            border-radius: 5px;
+            border: 1px #fff solid;
+            display: block;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 27px auto 0;
+            box-sizing: border-box;
+            position: relative;
             text-decoration: none;
             span{
-                color: $fon-gray;
+                z-index: 2;
+                position: relative;
             }
-            &:after {
-                transform: scaleX(1);
-                transition-delay: 0s;
+            &:hover{
+                text-decoration: none;
+                span{
+                    color: $fon-gray;
+                }
+                &:after {
+                    transform: scaleX(1);
+                    transition-delay: 0s;
+                }
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: #fff;
+                transform: scaleX(0);
+                transform-origin: center left;
+                transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1) 0.075s;
+                transition-delay: 0.035s, 0.035s;
+                border-radius: 3px;
             }
         }
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-color: #fff;
-            transform: scaleX(0);
-            transform-origin: center left;
-            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1) 0.075s;
-            transition-delay: 0.035s, 0.035s;
-            border-radius: 3px;
-        }
+
+
+
     }
 }
 
@@ -1753,7 +1768,18 @@ body.arrow-small{
 .content{
     padding: 40px 0;
 }
-
+.content{
+    .industry{
+        &__list{
+            margin-top: 30px;
+        }
+        &__item{
+            @media($bp-larger-than-tablet ) {
+                margin-left: 0;
+            }
+        }
+    }
+}
 .p-industry__list{
     margin-top: 40px;
     @media($bp-larger-than-tablet){
@@ -2134,6 +2160,9 @@ body.arrow-small{
         order: 1;
     }
 }
+.content .stext-service__top{
+    margin-top: 0;
+}
 .service-offer{
     order: 1;
     @media($bp-larger-than-tablet){
@@ -2194,7 +2223,7 @@ body.arrow-small{
             font-size: 14px;
             padding: 2px 12px;
             height: 30px;
-            line-height: 30px;
+            line-height: 26px;
         }
     }
     &__anons{
@@ -2639,15 +2668,12 @@ body.arrow-small{
     &__list{
         padding-left: 0;
         @media($bp-larger-than-tablet){
-            padding: 0px 15px 0 30px;
+            //padding: 0px 15px 0 30px;
         }
     }
     &__item{
         display: table;
         width: 100%;
-        + .applicants__item{
-            margin-top: 22px;
-        }
     }
     &__name{
         display: table-cell;
@@ -2674,4 +2700,26 @@ body.arrow-small{
             font-size: 16px;
         }
     }
+    &__link{
+        padding: 4px 20px;
+        display: block;
+        border-radius: 10px;
+        color: #454e45;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        @media($bp-larger-than-desktophd){
+            font-size: 16px;
+        }
+        &:hover{
+            background-color: #d4eed4;
+            color: #2c3329;
+        }
+        + .applicants__link{
+            margin-top: 22px;
+        }
+    }
+}
+.error + .label{
+    color: brown;
 }

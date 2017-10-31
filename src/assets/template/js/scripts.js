@@ -68,6 +68,21 @@ $(function() {
     $('.img-link').magnificPopup({
         type  : 'image'
     });
+    $(document).on('af_complete', function(event, response) {
+        if (response.success) {
+            if ($('#fileupload__name').length) {
+                $('#fileupload__name').text('');
+            }
+        }
+    });
+
+    $(document).on('change', '#fileupload', function(){
+        var file = $(this).val();
+        file = file.replace (/\\/g, "/").split ('/').pop ();
+        $('#fileupload__name').text(file);
+    });
+
+    $('input[name="phone"]').inputmask({"mask": "+7 (999) 999-99-99"});
 
     collapseReview = function(){
         if ($(window).width()<750){
