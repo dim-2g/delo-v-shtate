@@ -25,7 +25,10 @@ body.arrow-small{
     }
     &__top{
         height: 340px;
-        background: transparent url('/assets/template/img/bnr__bg.jpg') center 0 no-repeat;
+        //background: transparent url('/assets/template/img/bnr__bg.jpg') center 0 no-repeat;
+        background-color: transparent;
+        background-position: center 0;
+        background-repeat: no-repeat;
         background-size: cover;
         @media ($bp-larger-than-mobile) {
             height: 425px;
@@ -34,7 +37,10 @@ body.arrow-small{
     &__people{
         width: 100%;
         min-height: 340px;
-        background: transparent url('/assets/template/img/bnr__people.png') right bottom no-repeat;
+        //background: transparent url('/assets/template/img/bnr__people.png') right bottom no-repeat;
+        background-color: transparent;
+        background-position: right bottom;
+        background-repeat: no-repeat;
         background-size: contain;
         @media ($bp-larger-than-mobile) {
             height: 425px;
@@ -1669,6 +1675,13 @@ body.arrow-small{
 .content .stext{
     margin-top: 30px;
 }
+.content > .container > .stext{
+    margin-top: 0px;
+    min-height: 200px;
+}
+.section-title-crumbs + .content{
+    padding-top: 20px;
+}
 //@media ($bp-larger-than-desktop) {
     .stext--2-columns {
         column-count: 1;
@@ -2198,7 +2211,7 @@ body.arrow-small{
         }
     }
     &__caption {
-        font-size: 12px;
+        font-size: 14px;
         margin-bottom: 8px;
         line-height: 120%;
         font-weight: 500;
@@ -2211,14 +2224,14 @@ body.arrow-small{
         border-radius: 1px;
         color: #fff;
         height: 20px;
-        line-height: 20px;
+        line-height: 16px;
         padding: 2px 7px;
         display: inline-block;
         box-sizing: border-box;
         z-index: 2;
-        margin-bottom: 6px;
-        font-size: 8.75px;
-        margin-left: 0px;
+        margin-bottom: 12px;
+        font-size: 12px;
+        margin-left: 0;
         @media($bp-larger-than-mobile ){
             font-size: 14px;
             padding: 2px 12px;
@@ -2227,12 +2240,12 @@ body.arrow-small{
         }
     }
     &__anons{
-        font-size: 10px;
+        font-size: 13px;
         @media($bp-larger-than-mobile ){
             font-size: 14px;
         }
         p{
-            font-size: 10px;
+            font-size: 13px;
             line-height: 120%;
             @media($bp-larger-than-mobile ){
                 font-size: 14px;
@@ -2323,16 +2336,45 @@ body.arrow-small{
     *{
         box-sizing: border-box;
     }
+    &__list2
+    {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    &__item2
+    {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        margin-bottom: 30px;
+        box-sizing: border-box;
+        padding-left: 15px;
+        padding-right: 15px;
+        @media ($bp-larger-than-desktop){
+            display: inline-block;
+            width: 50%;
+        }
+        &--hidden{
+            display: none;
+        }
+    }
     &__list{
         margin-left: -15px;
         margin-right: -15px;
     }
     &__item{
-
+        box-sizing: border-box;
         padding-left: 15px;
         padding-right: 15px;
         margin-bottom: 30px;
+        display: block;
+        vertical-align: top;
         @media ($bp-larger-than-desktop){
+            display: inline-block;
             width: 50%;
         }
         &--hidden{
@@ -2347,6 +2389,7 @@ body.arrow-small{
         margin-right: auto;
         display: flex;
         flex-direction: column;
+        vertical-align: top;
         @media($bp-larger-than-mobile){
             display: block;
         }

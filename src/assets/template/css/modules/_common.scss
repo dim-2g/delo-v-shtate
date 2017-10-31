@@ -951,6 +951,7 @@ ul.pagination{
     text-align: center;
     line-height: 30px;
     margin: 0 4px;
+    vertical-align: top;
 
     a{
       display: inline-block;
@@ -958,7 +959,14 @@ ul.pagination{
       width: 100%;
       transition: $anim;
       border: 1px solid $green;
+
       &:hover{
+        background-color: $green;
+        color: #fff;
+      }
+    }
+    &.active{
+      a{
         background-color: $green;
         color: #fff;
       }
